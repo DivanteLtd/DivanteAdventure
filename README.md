@@ -60,7 +60,5 @@ pages. Remember to read our [contributing guide](./CONTRIBUTING.md).
 ## Core team
 * [ŁB](https://github.com/ŁB)
 
-Big thank you to Katarzyna Grzanka and Maciej Wilk for testing and leading the project so far :)
-
 
 [API documentation (not complete)](./docs/api/index.md)
