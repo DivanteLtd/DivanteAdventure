@@ -57,8 +57,4 @@ That's it! You'll find more detailed
 information on [development setup](./docs/project-setup.md) and [development tools](./docs/dev-tools.md) docs
 pages. Remember to read our [contributing guide](./CONTRIBUTING.md).
 
-## Core team
-* [ŁB](https://github.com/ŁB)
-
-
 [API documentation (not complete)](./docs/api/index.md)
