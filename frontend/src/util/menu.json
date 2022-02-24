@@ -1,0 +1,46 @@
+[{
+  "key": "menu.group.adventure",
+  "children": [{
+    "key": "menu.entry.dashboard",
+    "icon": "dashboard",
+    "url": "/dashboard"
+  },{
+    "key": "menu.entry.firm",
+    "icon": "business",
+    "children": [
+      { "key": "menu.entry.firm_employees", "url": "/firm/employees" }
+    ]
+  },{
+    "key": "menu.entry.free_days",
+    "icon": "today",
+    "url": "/free-days",
+    "contracts": [ "CLC LUMP SUM", "B2B LUMP SUM" ]
+  },{
+    "key": "menu.entry.unavailability_days",
+    "icon": "today",
+    "url": "/free-days",
+    "contracts": [ "CLC HOURLY", "B2B HOURLY" ]
+  },{
+    "key": "menu.entry.leave_days",
+    "icon": "today",
+    "url": "/free-days",
+    "contracts": [ "CoE" ]
+  }]
+},{
+  "key": "menu.group.agreements",
+  "children": [
+    { "key": "menu.entry.agreements_general",
+      "icon": "security",
+      "url": "/agreements/general"
+    },
+    { "key": "menu.entry.agreements_marketing",
+      "icon": "linked_camera",
+      "url": "/agreements/marketing"
+    },
+    {
+      "key": "menu.entry.agreements_acceptations",
+      "icon": "assignment",
+      "url": "/agreements/acceptations",
+      "roles": [ "ROLE_HR" ]
+    }]
+}]

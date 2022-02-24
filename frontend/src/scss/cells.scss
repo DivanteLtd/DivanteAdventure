@@ -1,0 +1,56 @@
+@import './settings';
+@mixin lines-gradient($color) {
+  $bg: rgba(0, 0, 0, 0);
+  $fg: rgba($color, 1);
+  background-image: linear-gradient(to top right, $bg 0%, $bg 35%, $fg 40%, $fg 60%, $bg 65%, $bg 100%);
+  font-weight: bold;
+  color: white;
+}
+
+td {
+  text-align: center;
+  max-width: $dataColumnMaxWidth;
+  border-left: $tableBorderStyle;
+  position: relative;
+  margin: 0;
+}
+
+td.day-off-planned {
+  @include lines-gradient($dayOffColor);
+}
+
+td.day-off {
+  background-color: $dayOffColor;
+}
+
+td.sick-leave-planned {
+  @include lines-gradient($sickLeaveColor);
+}
+
+td.sick-leave {
+  background-color: $sickLeaveColor;
+}
+
+td.freeDay {
+  background-color: $freeDayColor;
+  width: 15px !important;
+  padding: 0 !important;
+}
+
+td.weekend {
+  background-color: $weekendDayColor;
+  width: 15px !important;
+  padding: 0 !important;
+}
+
+td.active {
+  background-color: $activeDayColor;
+}
+
+td.disabled {
+  background-color: $weekendDayColor;
+}
+
+td.today {
+  background-color: $todayDayColor;
+}

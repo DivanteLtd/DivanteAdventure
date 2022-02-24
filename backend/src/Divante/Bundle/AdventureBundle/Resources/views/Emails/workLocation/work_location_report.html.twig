@@ -1,0 +1,24 @@
+{% extends 'AdventureBundle:Emails:layout.html.twig' %}
+{% block body %}
+    {% if type == 1 %}
+        <h3>{% trans %}workLocation.reportRemote{% endtrans %}</h3>
+    {% else %}
+        <h3>{% trans %}workLocation.reportTrip{% endtrans %}</h3>
+    {% endif %}
+    <div>
+        <table>
+            <tr>
+                <th>{% trans %}nameAndSurname{% endtrans %}</th>
+                <th>{% trans %}Contract{% endtrans %}</th>
+                <th>{% trans %}Date{% endtrans %}</th>
+            </tr>
+            {% for entry in entries %}
+                <tr>
+                    <td>{{ entry.employeeName }}</td>
+                    <td>{{ entry.contract }}</td>
+                    <td>{{ entry.date|date("Y-m-d") }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends 'AdventureBundle:Emails:layout.html.twig' %}
+
+{% block body %}
+    {% if dates|length > 0 %}
+    <b>{% trans %}Person{% endtrans %}:&nbsp;{{ name }}&nbsp;{{ lastName }}&nbsp;{% trans %}confirmed{% endtrans %}
+        {% if contract == 'CoE' %}
+            {% if type == 1 %}
+                {% trans %}workLocation.remoteWork.CoE{% endtrans %}
+            {% else %}
+                {% trans %}workLocation.businessTrip.CoE{% endtrans %}
+            {% endif %}
+        {% elseif contract == 'CLC' %}
+            {% if type == 1 %}
+                {% trans %}workLocation.remoteWork.CLC{% endtrans %}
+            {% else %}
+                {% trans %}workLocation.businessTrip.CLC{% endtrans %}
+            {% endif %}
+         {% elseif contract == 'B2B' %}
+            {% if type == 1 %}
+                {% trans %}workLocation.remoteWork.B2B{% endtrans %}
+            {% else %}
+                {% trans %}workLocation.businessTrip.B2B{% endtrans %}
+            {% endif %}
+         {% endif %}
+    </b><br><br>
+        {% trans %}workLocation.p1{% endtrans %}:
+        <ul>
+            {% for date in dates %}
+                <li>
+                    <b>{{ date }}</b>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <b>{% trans %}Person{% endtrans %}:&nbsp;{{ name }}&nbsp;{{ lastName }}&nbsp;{% trans %}workLocation.p2{% endtrans %}</b><br><br>
+    {% endif %}
+{% endblock %}

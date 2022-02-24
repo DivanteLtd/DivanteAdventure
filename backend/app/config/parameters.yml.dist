@@ -1,0 +1,41 @@
+# This file is a "template" of what your parameters.yml file should look like
+# Set parameters here that may be different on each deployment target of the app, e.g. development, staging, production.
+# http://symfony.com/doc/current/best_practices/configuration.html#infrastructure-related-configuration
+parameters:
+    database_host:     127.0.0.1
+    database_port:     ~
+    database_name:     example
+    database_user:     example
+    database_password: ~
+
+    redis_host:  redis
+    redis_port:  6379
+    redis_host_session:  redis
+    redis_port_session:  6379
+    mailer_transport:  smtp
+    mailer_encryption: ssl
+    mailer_auth_mode:  login
+    mailer_host:       smtp.gmail.com
+    mailer_user:       Example
+    mailer_password:   ~
+    mailer_from_address: example@example.com
+    mail: ~ # Object wih fields "bok", "accountant", "evidence", "adm_responsible", "adm_personnel", "helpdesk_responsible", "helpdesk_department", "reception", "tech" and "employers_representative"
+
+    # A secret key that's used to generate certain security-related tokens
+    secret:            ThisTokenIsNotSoSecretChangeIt
+
+    jwt_private_key_path: '%kernel.root_dir%/../var/jwt/private.pem' # ssh private key path
+    jwt_public_key_path:  '%kernel.root_dir%/../var/jwt/public.pem'  # ssh public key path
+    jwt_key_pass_phrase:  'sshKeyPassPhrase'                               # ssh key pass phrase
+    jwt_token_ttl:        86400
+
+    google_app_id: ClientId
+    google_app_secret: ClientSecret
+
+    frontend_app_url: ~                                           # full frontend app URL
+    frontend_image_url: ~                                         # full image URL
+    oauth_allowed_domain: 'example.pl'                            # company domain
+    mercure_jwt_key: ~
+    mercure_url: ~
+    mercure_publish_url: ~
+    allowed_domains: ['ex1domain.com', 'ex2domain.pl', 'ex3domain.io']

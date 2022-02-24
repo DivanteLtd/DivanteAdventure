@@ -1,0 +1,43 @@
+{% extends 'AdventureBundle:Emails:layout.html.twig' %}
+
+{# @var removed \Divante\Bundle\AdventureBundle\Entity\Employee #}
+{# @var removing \Divante\Bundle\AdventureBundle\Entity\Employee #}
+
+
+{% block title %}
+    {% if removed.female %}
+        {{ removed.name }}&nbsp;{{  removed.lastName }}&nbsp;{% trans %}hasBeenRemovedFemale{% endtrans %}
+    {% elseif removed.male %}
+        {{ removed.name }}&nbsp;{{  removed.lastName }}&nbsp;{% trans %}hasBeenRemovedMale{% endtrans %}
+    {% else %}
+        {% trans %}Person{% endtrans %}&nbsp;{{ removed.name }}&nbsp;{{  removed.lastName }}&nbsp;{% trans %}hasBeenRemovedFemale{% endtrans %}
+    {% endif %}
+{% endblock %}
+
+{% block body %}
+    <div>
+        <h3>{% trans %}thePersonHasBeenRemovedFromTheAdventureSystem{% endtrans %}</h3>
+        <p>
+            <b>{% trans %}personRemoved{% endtrans %}: {{ removed.name }} {{ removed.lastName }}</b><br/>
+            {% trans %}removalAdministrator{% endtrans %}: {{ removing.name }} {{ removing.lastName }}
+        </p>
+        <p>
+            {% trans %}removePersonMail.part1{% endtrans %}
+            {% if removed.user.role("ROLE_MANAGER") and removed.female %}
+                <i>{% trans %}because{% endtrans %}&nbsp;{{ removed.name }}&nbsp;{{ removed.lastName }}&nbsp;{% trans %}couldFemale{% endtrans %}&nbsp;
+                    {% trans %}removePersonMail.part2{% endtrans %}
+                </i>
+                {% trans %}removePersonMail.part3{% endtrans %}
+            {% elseif removed.user.role("ROLE_MANAGER") and removed.male %}
+                <i>{% trans %}because{% endtrans %}&nbsp;{{ removed.name }}&nbsp;{{ removed.lastName }}&nbsp;{% trans %}couldMale{% endtrans %}&nbsp;{% trans %}removePersonMail.part2{% endtrans %}
+                </i>
+                {% trans %}removePersonMail.part3{% endtrans %}
+            {% elseif removed.user.role("ROLE_MANAGER") %}
+            <i>{% trans %}because{% endtrans %}&nbsp;{% trans %}person{% endtrans %}&nbsp;{{ removed.name }}&nbsp;{{ removed.lastName }}&nbsp;{% trans %}couldFemale{% endtrans %}&nbsp;{% trans %}removePersonMail.part2{% endtrans %}
+            </i>
+            {% trans %}removePersonMail.part3{% endtrans %}
+            {% endif %}
+            <b>{% trans %}removePersonMail.part4{% endtrans %}</b>
+        </p>
+    </div>
+{% endblock %}

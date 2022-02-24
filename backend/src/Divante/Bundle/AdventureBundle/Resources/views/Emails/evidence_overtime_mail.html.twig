@@ -1,0 +1,17 @@
+{% extends 'AdventureBundle:Emails:layout.html.twig' %}
+
+{% block title %}
+    {{ document.emailSubject }}
+{% endblock %}
+
+{% block body %}
+    <div>
+        <h3>{% trans %}additionalHoursHaveBeenAccepted{% endtrans %}</h3>
+        <p>
+            <b>{% trans %}contractorReportingAdditionalHours{% endtrans %}:</b>&nbsp;{{ document.evidence.employee.name }}&nbsp;{{ document.evidence.employee.lastName }}<br/>
+            <b>{% trans %}personRequestingAdditionalHours{% endtrans %}:</b>&nbsp;{{ document.evidence.overtimeManager.name }}&nbsp;{{ document.evidence.overtimeManager.lastName }}<br/>
+            <b>{% trans %}applyToMonth{% endtrans %}:</b>&nbsp;{{ document.month(document.evidence.month) }}&nbsp;{{ document.evidence.year }}
+        </p>
+        <p>{% trans %}theDocumentIsAvailableForDownloadInTheAttachment{% endtrans %}.</p>
+    </div>
+{% endblock %}

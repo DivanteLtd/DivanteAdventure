@@ -1,0 +1,23 @@
+{% extends 'AdventureBundle:Emails:layout.html.twig' %}
+
+{% block title %}
+    {% trans %}informationAboutDataProcessingInTheProject{% endtrans %}&nbsp;{{ projectName }}
+{% endblock %}
+
+{% block body %}
+    <h3>{% trans %}informationAboutDataProcessingInTheProject{% endtrans %}&nbsp;{{ projectName }}</h3>
+    {% if criteria %}
+        <p>{% trans %}typesOfDataProcessedInTheProject{% endtrans %}:</p>
+        <ul>
+            {% for criterion in criteria %}
+                <li>
+                    {% if language == 'pl' %}
+                        {{ criterion.namePl }}
+                    {% else %}
+                        {{ criterion.nameEn }}
+                    {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+{% endblock %}

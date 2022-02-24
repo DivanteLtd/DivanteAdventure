@@ -1,0 +1,25 @@
+{% extends 'AdventureBundle:Emails:layout.html.twig' %}
+
+{% block body %}
+    <div>
+        <h3>{% trans %}newPerson{% endtrans %}&nbsp;{{ person.name }}&nbsp;{{ person.lastName }}
+            {% if person.position %}
+            -&nbsp;{{ person.position }}
+            {% endif %}&nbsp;{% trans %}joinsTheCompany{% endtrans %}&nbsp;{{ person.hireDate }}.
+        </h3>
+        <p>
+            <b>
+                {% trans %}newHire.preparing.card{% endtrans %}<br/>
+                {% trans %}newHire.preparing.documents{% endtrans %}<br/>
+                {% trans %}newHire.preparing.shipping{% endtrans %}<br/>
+            </b>
+            {% trans %}newHire.info.contact{% endtrans %}<br>
+            {% trans %}Email{% endtrans %}&nbsp;:&nbsp;{{ person.privateEmail }}<br>
+            {% trans %}Phone{% endtrans %}&nbsp;.:&nbsp;{{ person.privatePhone }}<br>
+            {% trans %}newHire.info.address{% endtrans %}<br>
+            {{ person.city }}<br>
+            {{ person.postalCode }}<br>
+            {{ person.street }}
+        </p>
+    </div>
+{% endblock %}

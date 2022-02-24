@@ -1,0 +1,64 @@
+<?php
+
+namespace Divante\AdventureBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Skill
+ *
+ * @ORM\Table(name="skill", indexes={@ORM\Index(name="FK_skill_skill_area", columns={"skill_area_id"})})
+ * @ORM\Entity
+ */
+class Skill
+{
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="name", type="string", length=50, nullable=false)
+     */
+    private $name;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="description", type="text", length=65535, nullable=true)
+     */
+    private $description;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="created_at", type="datetime", nullable=false)
+     */
+    private $createdAt = 'CURRENT_TIMESTAMP';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="updated_at", type="datetime", nullable=false)
+     */
+    private $updatedAt = 'CURRENT_TIMESTAMP';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var \Divante\AdventureBundle\Entity\SkillArea
+     *
+     * @ORM\ManyToOne(targetEntity="Divante\AdventureBundle\Entity\SkillArea")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="skill_area_id", referencedColumnName="id")
+     * })
+     */
+    private $skillArea;
+
+
+}
+

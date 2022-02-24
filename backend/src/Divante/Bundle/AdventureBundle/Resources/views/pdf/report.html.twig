@@ -1,0 +1,113 @@
+{% extends 'AdventureBundle:pdf:email_pdf_root.html.twig' %}
+
+{% block style %}
+    <style>
+        header h1 {
+            font-variant: titling-caps;
+            text-align: center;
+            font-size: 130%;
+        }
+
+        header h2 {
+            text-align: left;
+            font-size: 130%;
+            font-weight: 500;
+            margin-bottom: 1px;
+        }
+
+        body h2 {
+            font-weight: normal;
+            margin: 0 0 10px 0;
+        }
+        ul, ul li {
+            list-style: none;
+            margin: 10px 0 10px 0;
+            font-size: 90%;
+        }
+
+        .label {
+            font-weight: bold;
+        }
+        body span {
+            padding-top: 20px;
+        }
+    </style>
+{% endblock %}
+
+{% block title %}
+    {% trans %}dataInProject{% endtrans %}
+{% endblock %}
+
+{% block header %}
+    <h2 style="font-weight: bold">
+        {{ document.project.name }}
+    </h2>
+{% endblock %}
+
+{% block body %}
+    <ul>
+        <li style="padding-top: -10px">
+            <span class="label">{% trans %}projectType{% endtrans %}:</span>
+            {% if  document.project.type == 0 %}
+                <span>{% trans %}projectTypeUndefined{% endtrans %}</span>
+            {% endif %}
+            {% if  document.project.type == 1 %}
+                <span>{% trans %}projectTypeImplementation{% endtrans %}</span>
+            {% endif %}
+            {% if  document.project.type == 2 %}
+                <span>{% trans %}projectTypeMaintenance{% endtrans %}</span>
+            {% endif %}
+        </li>
+        <li>
+            {% if document.project.endedAtTimestamp  != -1 %}
+                {% if date(document.project.endedAtTimestamp) < date() %}
+                    <span class="label">{% trans %}projectLasted{% endtrans %}:</span>
+                    <span>{% trans %}from{% endtrans %}&nbsp;{{ document.project.startedAtTimestamp|date('d-m-Y') }}&nbsp;{% trans %}to{% endtrans %}&nbsp;{{ document.project.endedAtTimestamp|date('d-m-Y') }}</span>
+                {% else %}
+                    <span class="label">{% trans %}projectIs{% endtrans %}:</span>
+                    <span>{% trans %}from{% endtrans %}&nbsp;{{ document.project.startedAtTimestamp|date('d-m-Y') }}&nbsp;{% trans %}to{% endtrans %}&nbsp;{{ document.project.endedAtTimestamp|date('d-m-Y') }}</span>
+                {% endif %}
+            {% else %}
+                <span class="label">{% trans %}projectIs{% endtrans %}:</span>
+                <span>{% trans %}from{% endtrans %}&nbsp;{{ document.project.startedAtTimestamp|date('d-m-Y') }}</span>
+            {% endif %}
+        </li>
+        <span class="label">{% trans %}persons{% endtrans %}:</span>
+        {% if document.employeeProject|length > 0 %}
+            {% for element in document.employeeProject %}
+                <li>
+                    <span style="margin-left: 10px">-&nbsp;{{ element.name }}&nbsp;{{ element.lastName}}</span>
+                </li>
+            {% endfor %}
+        {% else %}
+            <li>{% trans %}noData{% endtrans %}</li>
+        {% endif %}
+
+        <span class="label">{% trans %}category{% endtrans %}:</span>
+        {% if document.project.criteria|length > 0 %}
+
+
+            {% for category in document.project.criteria %}
+                <li>
+                    {% if app.request.locale == 'pl' %}
+                    <span style="margin-left: 10px">- {{ category.namePl }} </span>
+                     {% else %}
+                    <span style="margin-left: 10px">- {{ category.nameEn }} </span>
+                    {% endif %}
+                </li>
+            {% endfor %}
+        {% else %}
+            <li>{% trans %}noData{% endtrans %}</li>
+        {% endif %}
+        <span class="label">{% trans %}historyData{% endtrans %}:</span>
+        {% if document.history|length > 0 %}
+            {% for element in document.history %}
+                <li>
+                    <span style="margin-left: 10px">- {{ element.name }}&nbsp;{{ element.lastName }}</span>
+                </li>
+            {% endfor %}
+        {% else %}
+            <li>{% trans %}noData{% endtrans %}</li>
+        {% endif %}
+    </ul>
+{% endblock %}

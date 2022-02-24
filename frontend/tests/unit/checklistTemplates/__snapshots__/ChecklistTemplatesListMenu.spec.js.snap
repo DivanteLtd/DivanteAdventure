@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ChecklistTemplatesCard.vue renders correctly 1`] = `
+<div
+  id="checklist-templates-list-menu"
+>
+  <v-menu-stub
+    closedelay="0"
+    closeonclick="true"
+    closeoncontentclick="true"
+    contentclass=""
+    maxheight="auto"
+    maxwidth="auto"
+    nudgebottom="0"
+    nudgeleft="0"
+    nudgeright="0"
+    nudgetop="0"
+    nudgewidth="0"
+    offsety="true"
+    opendelay="0"
+    openonclick="true"
+    origin="top left"
+    transition="v-menu-transition"
+  >
+     
+    <v-list-stub
+      tag="div"
+      tile="true"
+    >
+      <v-list-item-stub
+        activeclass=""
+        tag="div"
+      >
+        <v-list-item-title-stub>
+          Add new checklist template
+        </v-list-item-title-stub>
+      </v-list-item-stub>
+    </v-list-stub>
+  </v-menu-stub>
+   
+  <loading-dialog-stub />
+</div>
+`;

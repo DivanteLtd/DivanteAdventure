@@ -1,0 +1,20 @@
+{
+  "short_name": "Adventure",
+  "name": "Adventure - Open HRM",
+  "icons": [
+    {
+      "src": "/static/dvnt_logo_black.png",
+      "sizes": "470x470",
+      "type": "image/png"
+    },
+    {
+      "src": "/static/dvnt_logo_black_600.png",
+      "sizes": "600x600",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#217AFA",
+  "display": "standalone",
+  "theme_color": "#1071FF"
+}

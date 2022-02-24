@@ -1,0 +1,13 @@
+{% extends 'AdventureBundle:Emails:layout.html.twig' %}
+{# @var employee \Divante\Bundle\AdventureBundle\Entity\Employee  #}
+{# @var assignment \Divante\Bundle\AdventureBundle\Entity\Hardware\HardwareAssignment #}
+
+{% block body %}
+    <div>
+        <h3>{% trans %}hardwareMails.info.part1{% endtrans %}</h3>
+        <p>
+            <b>{% trans %}hardwareMails.info.part2{% endtrans %}:</b>&nbsp;{{ assignment.employee.name }}&nbsp;{{ assignment.employee.lastName }}<br/>
+            <b>{% trans %}hardware{% endtrans %}:</b>&nbsp;{{ assignment.manufacturer }}&nbsp;{{ assignment.model }}&nbsp;(S/N&nbsp;{{ assignment.serialNumber }})<br/>
+        </p>
+    </div>
+{% endblock %}

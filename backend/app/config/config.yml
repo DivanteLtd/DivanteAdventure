@@ -1,0 +1,206 @@
+imports:
+    - { resource: parameters.yml }
+    - { resource: security.yml }
+
+# Put parameters here that don't need to change on each machine where the app is deployed
+# http://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
+parameters:
+    locale: en
+    upload_dir: '%kernel.root_dir%/../web/uploads'
+
+jms_serializer:
+    property_naming:
+        id: jms_serializer.identical_property_naming_strategy
+
+goetas_multipart_upload:
+    first_part_as_default: false
+
+
+doctrine_migrations:
+    namespace: Adventure\Migrations
+    name: Adventure Migrations
+
+framework:
+    #esi:             ~
+    translator:
+        path: "%kernel.root_dir%/Resources/translations"
+
+    secret:          "%secret%"
+    router:
+        resource: "%kernel.root_dir%/config/routing.yml"
+        strict_requirements: ~
+    form:            ~
+    csrf_protection: ~
+    validation:      { enable_annotations: true }
+    serializer:      { enable_annotations: true }
+    templating:
+        engines: ['twig']
+    default_locale:  "%locale%"
+    trusted_hosts:   ~
+    session:
+        handler_id:  session.handler.native_file
+        save_path:   "%kernel.root_dir%/../var/sessions/%kernel.environment%"
+    fragments:       ~
+    http_method_override: true
+    assets: ~
+    php_errors:
+        log: true
+
+snc_redis:
+    clients:
+        default:
+            type: phpredis
+            alias: default
+            dsn: [ 'redis://%redis_host%:%redis_port%' ]
+            logging: false
+
+# Twig Configuration
+twig:
+    debug:            "%kernel.debug%"
+    strict_variables: "%kernel.debug%"
+    globals:
+        frontend_app_url: "%frontend_app_url%"
+        frontend_image_url: "%frontend_image_url%"
+
+# Doctrine Configuration
+doctrine:
+    dbal:
+        driver:   pdo_mysql
+        host:     "%database_host%"
+        port:     "%database_port%"
+        dbname:   "%database_name%"
+        user:     "%database_user%"
+        password: "%database_password%"
+        charset:  UTF8
+
+    orm:
+        auto_generate_proxy_classes: "%kernel.debug%"
+        naming_strategy: doctrine.orm.naming_strategy.underscore
+        auto_mapping: true
+        dql:
+            string_functions:
+                MONTH: DoctrineExtensions\Query\Mysql\Month
+                YEAR: DoctrineExtensions\Query\Mysql\Year
+
+
+# Fos Rest Configuration
+fos_rest:
+    versioning: true
+    routing_loader:
+        include_format: true
+        default_format: json
+    param_fetcher_listener: force
+    allowed_methods_listener: true
+    disable_csrf_role: ROLE_API
+    format_listener:
+        rules:
+            - { path: '^/api', priorities: ['json'], fallback_format: json, prefer_extension: true }
+            - { path: '^/', stop: true }
+    view:
+        view_response_listener: 'force'
+        formats:
+            json: true
+        templating_formats:
+            html: false
+        failed_validation: HTTP_BAD_REQUEST
+
+# Nelmi Api Doc Configuration
+nelmio_api_doc:
+    sandbox:
+        accept_type: application/json
+        body_format:
+            formats: [json]
+            default_format: json
+        request_format:
+            formats:
+                json: application/json
+            method: accept_header
+            default_format: json
+        authentication:
+            name: Authorization
+            delivery: header
+nelmio_cors:
+    paths:
+        '^/api/':
+            allow_origin: ['*']
+            allow_headers: ['*']
+            allow_methods: ['POST', 'PUT', 'GET', 'DELETE', 'PATCH']
+            max_age: 86400
+
+# Fos User Configuration
+fos_user:
+    db_driver: orm
+    firewall_name: main
+    user_class: Divante\Bundle\AdventureBundle\Entity\User
+    from_email:
+        address: "%mailer_from_address%"
+        sender_name: "%mailer_user%"
+
+# Hwi OAuth Configuration
+hwi_oauth:
+    firewall_names: [main]
+    connect:
+        account_connector: Divante\Bundle\AdventureBundle\Security\Core\User\OAuthUserProvider
+    resource_owners:
+        google:
+            type:                google
+            client_id:           "%google_app_id%"
+            client_secret:       "%google_app_secret%"
+            scope:               "https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile"
+            paths:
+                email: email
+            options:
+                hd: "%oauth_allowed_domain%"
+
+# Lexik JWT Authentication Configuration
+lexik_jwt_authentication:
+    private_key_path: '%jwt_private_key_path%'
+    public_key:  '%jwt_public_key_path%'
+    pass_phrase:      '%jwt_key_pass_phrase%'
+    token_ttl:        '%jwt_token_ttl%'
+    user_identity_field: username
+    token_extractors:
+        authorization_header:      # look for a token as Authorization Header
+            enabled: true
+            prefix:  Bearer
+            name:    Authorization
+
+# Gesdinet JWT Refresh Token Configuration
+gesdinet_jwt_refresh_token:
+    ttl: 86400
+    ttl_update: true
+    firewall: api
+    user_provider: Divante\Bundle\AdventureBundle\Security\Core\User\OAuthUserProvider
+
+swiftmailer:
+    transport:  '%mailer_transport%'
+    encryption: '%mailer_encryption%'
+    auth_mode:  '%mailer_auth_mode%'
+    host:       '%mailer_host%'
+    username:   '%mailer_user%'
+    password:   '%mailer_password%'
+    spool:     { type: memory }
+
+knp_gaufrette:
+    adapters:
+        local_uploads:
+            local:
+                directory: '%upload_dir%'
+    filesystems:
+        uploads:
+            adapter: local_uploads
+
+monolog:
+    channels: [business_event_logger]
+    handlers:
+        main:
+            type: service
+            channels: [ '!event', '!business_event_logger', '!php' ]
+            id: adventure.main_handler
+        console:
+            type:  console
+            channels: [ '!event', '!datalogger', '!php' ]
+        business_event_logger:
+            type: service
+            channels: ['business_event_logger']
+            id: adventure.business_event_logger_handler

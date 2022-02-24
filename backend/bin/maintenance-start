@@ -1,0 +1,3 @@
+#!/bin/sh
+FILE=/var/www/backend/web/maintenance.flag
+touch $FILE

@@ -1,0 +1,40 @@
+{% extends 'AdventureBundle:Emails:layout.html.twig' %}
+
+{% block title %}
+    {{ document.emailSubject }}
+{% endblock %}
+
+{% block body %}
+    <div>
+        <h3>{% trans %}aNewEvidenceHasBeenGenerated{% endtrans %}</h3>
+        <p>
+            <b>{% trans %}applyToPerson{% endtrans %}:</b>&nbsp;{{ document.evidence.employee.name }}&nbsp;{{ document.evidence.employee.lastName }}<br>
+            <b>{% trans %}applyToMonth{% endtrans %}:</b>&nbsp;{{ document.month(document.evidence.month) }}&nbsp;{{ document.evidence.year }}
+        </p>
+        {% if document.evidence.overtimeStatus == 1 %}
+            <p style="font-size: initial">{% trans %}theEvidenceOfAdditionalHoursHasBeenSentAndIsAwaitingApproval{% endtrans %}.</p>
+        {% endif %}
+        {% if document.evidence.invoices is empty %}
+            <p style="font-size: initial">{% trans %}theDocumentIsAvailableForDownloadInTheAttachment{% endtrans %}.</p>
+        {% elseif document.evidence.invoices|length > 1 %}
+            <p style="font-size: initial">{% trans %}theDocumentWithB2BInvoicesIsAvailableForDownloadInTheAttachment{% endtrans %}.</p>
+        {% else %}
+            <p style="font-size: initial">{% trans %}theDocumentWithB2BInvoiceIsAvailableForDownloadInTheAttachment{% endtrans %}.</p>
+        {% endif %}
+        <p>
+            <b>***</b>
+        </p>
+        <p>
+            <b>{% trans %} evidence.p1{% endtrans %}</b>
+        </p>
+        <p>
+            {% trans %} evidence.p2{% endtrans %}
+        </p>
+        <p>
+            <i>{% trans %} evidence.p3{% endtrans %}</i>
+        </p>
+        <p>
+            <i>{% trans %} evidence.p4{% endtrans %}</i>
+        </p>
+    </div>
+{% endblock %}

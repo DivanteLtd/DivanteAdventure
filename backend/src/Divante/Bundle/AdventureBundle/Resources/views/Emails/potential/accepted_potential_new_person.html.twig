@@ -1,0 +1,35 @@
+{% extends 'AdventureBundle:Emails:layout.html.twig' %}
+{# @var employee \Divante\Bundle\AdventureBundle\Entity\PotentialEmployee #}
+
+{% block title %}
+    {% trans %}mail.welcome.subject{% endtrans %}
+{% endblock %}
+
+{% block body %}
+<div>
+    <h3>{% trans %}mail.welcome.welcomeHeader{% endtrans %}</h3>
+    <p>{% trans %}mail.welcome.hi{% endtrans %}&nbsp;{{ employee.name }},</p>
+    <p>{% trans %}mail.welcome.firstParagraph{% endtrans %}</p>
+    <p><b>{% trans %}mail.welcome.secondParagraph{% endtrans %}</b></p>
+    <p>{% trans %}mail.welcome.thirdParagraph{% endtrans %}</p>
+    <p>
+        {% trans %}mail.welcome.listHeader{% endtrans %}
+        <ul>
+            <li>{% trans %}mail.welcome.firstPoint{% endtrans %}</li>
+            <li>{% trans %}mail.welcome.secondPoint{% endtrans %}</li>
+            <li>{% trans %}mail.welcome.thirdPoint{% endtrans %}</li>
+            <li>{% trans %}mail.welcome.fourthPoint{% endtrans %}</li>
+            <li>
+                {% trans %}mail.welcome.fifthPointA{% endtrans %}
+                {% if employee.contractType == 'CoE' %}
+                    {% trans %}mail.welcome.fifthPointB.CoE{% endtrans %}
+                {% else %}
+                    {% trans %}mail.welcome.fifthPointB.B2B{% endtrans %}
+                {% endif %}
+                .
+                {% trans %}mail.welcome.fifthPointC{% endtrans %}
+            </li>
+        </ul>
+    </p>
+</div>
+{% endblock %}

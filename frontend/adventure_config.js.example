@@ -1,0 +1,2 @@
+window.ADVENTURE_BACKEND_URL = 'https://adventure-local.example.com';
+window.ADVENTURE_DEMO_ENABLED = false;

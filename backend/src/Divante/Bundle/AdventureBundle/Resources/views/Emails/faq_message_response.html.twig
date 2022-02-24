@@ -1,0 +1,39 @@
+{% extends 'AdventureBundle:Emails:layout.html.twig' %}
+
+{% block title %}
+    {% if accepted %}
+        {% trans %}yourQuestionHasBeenAccepted{% endtrans %}
+    {% else %}
+        {% trans %}yourQuestionHasBeenRejected{% endtrans %}
+    {% endif %}
+{% endblock %}
+
+{% block body %}
+    <div>
+        <h3>
+            {% if accepted %}
+                {% trans %}yourQuestionHasBeenAccepted{% endtrans %}
+            {% else %}
+                {% trans %}yourQuestionHasBeenRejected{% endtrans %}
+            {% endif %}
+        </h3>
+        <p>
+            {{ answerer.name }}&nbsp;{{ answerer.lastName }}&nbsp;
+            {% if accepted %}
+                {% trans %}hasAcceptedYourQuestion{% endtrans %}
+            {% else %}
+                {% trans %}hasRejectedYourQuestion{% endtrans %}
+            {% endif %}
+            :&nbsp;
+            {{ question.question }}
+        </p>
+        {% if accepted %}
+        <p style="font-size: initial">{% trans %}youCanSeeAnswerInAdventure{% endtrans %}:</p>
+        <div style="margin-top: 20px;">
+            <a href="{{ frontend_app_url }}/#/faq" class="button">{% trans %}goToFAQModule{% endtrans %}</a>
+        </div>
+        {% else %}
+            {% trans %}rejectionReason{% endtrans %}:&nbsp;{{ rejectionReason }}
+        {% endif %}
+    </div>
+{% endblock %}

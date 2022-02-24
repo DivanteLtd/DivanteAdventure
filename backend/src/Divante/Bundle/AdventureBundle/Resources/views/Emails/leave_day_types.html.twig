@@ -1,0 +1,59 @@
+<ul>
+    {% for day in request.requestDays %}
+        <li>{{ day.date|date("d-m-Y") }}
+                {% if day.type == 0 %}
+                        ({% trans %}paidDayOff{% endtrans %},
+                {% elseif day.type == 1 %}
+                        ({% trans %}unpaidDayOff{% endtrans %},
+                {% elseif day.type == 2 %}
+                        ({% trans %}holidayLeave{% endtrans %},
+                {% elseif day.type == 3 %}
+                        ({% trans %}unpaidLeave{% endtrans %},
+                {% elseif day.type == 4 %}
+                        ({% trans %}leaveOnDemand{% endtrans %},
+                {% elseif day.type == 5 %}
+                        ({% trans %}occasionalHolidays{% endtrans %},
+                {% elseif day.type == 6 %}
+                        ({% trans %}carer'sLeave{% endtrans %},
+                {% elseif day.type == 7 %}
+                        ({% trans %}paidDickDay{% endtrans %},
+                {% elseif day.type == 8 %}
+                        ({% trans %}unpaidSickDay{% endtrans %},
+                {% elseif day.type == 9 %}
+                        ({% trans %}receivingOvertime{% endtrans %},
+                {% elseif day.type == 11 %}
+                        ({% trans %}unavailabilityDay{% endtrans %},
+                {% endif %}
+            {% if request.status == 4 %}
+                {% if day.status == 3 %}
+                        <span style="color:blue">{% trans %}status{% endtrans %}:&nbsp;{% trans %}resignation{% endtrans %}</span>)
+                {% endif %}
+                {% if day.status == 0 %}
+                        <span style="color:green">{% trans %}status{% endtrans %}:&nbsp;{% trans %}active{% endtrans %}</span>)
+                {% endif %}
+            {% endif %}
+
+            {% if request.status != 4 %}
+                {% if day.status == 3 or day.status == 2 %}
+                    <span style="color:blue">{% trans %}status{% endtrans %}:&nbsp;{% trans %}resignation{% endtrans %}</span>)
+                {% endif %}
+                {% if day.status == 0 %}
+                    <span style="color:green">{% trans %}status{% endtrans %}:&nbsp;{% trans %}active{% endtrans %}</span>)
+                {% endif %}
+            {% endif %}
+
+            {% if oldDay.id is defined and oldDay.id == day.id %}
+                - <span style="color:red">{% trans %}modifiedDay{% endtrans %}</span>
+                {% if oldDay.status != day.status %}
+                - <span style="color:red">{% trans %}statusOfDayChanged{% endtrans %}</span>
+                        {% if day.status == 3 %}
+                        <span style="color:blue">{% trans %}on{% endtrans %}&nbsp;{% trans %}resignation{% endtrans %}</span>
+                        {% endif %}
+                        {% if day.status == 0 %}
+                        <span style="color:green">{% trans %}on{% endtrans %}&nbsp;{% trans %}active{% endtrans %}</span>
+                        {% endif %}
+                {% endif %}
+            {% endif %}
+        </li>
+    {% endfor %}
+</ul>

@@ -1,0 +1,125 @@
+{% extends 'AdventureBundle:pdf/hardware:hardware-template.html.twig' %}
+
+{# @var agreement \Divante\Bundle\AdventureBundle\Entity\Hardware\HardwareAgreement #}
+{# @var pesel string #}
+
+{% block title %}
+    {% trans %}lending.CoE.title{% endtrans %}
+{% endblock %}
+
+{% block header %}
+    <h3>{% trans %}lending.CoE.header.beforeDate{% endtrans %}&nbsp;{{ signatureDate|default('......') }}&nbsp;{% trans %}lending.CoE.header.afterDate{% endtrans %}</h3>
+{% endblock %}
+
+{% block body %}
+    <div class="entry">
+        <b>{% trans %}lending.CoE.lender.name{% endtrans %}</b>&nbsp;{% trans %}lending.CoE.lender.text{% endtrans %}
+    </div>
+    <div class="note">
+        {% trans %}lending.CoE.lender.reffered_to{% endtrans %}&nbsp;"<b>{% trans %}lending.CoE.lender.reffered_name{% endtrans %}</b>",
+    </div>
+    <div class="entry">{% trans %}lending.CoE.and{% endtrans %}</div>
+    <div class="entry">
+        {{ agreement.assignment.employee.name }}&nbsp;{{ agreement.assignment.employee.lastName }}&nbsp;{% trans %}lending.CoE.borrower.withPesel{% endtrans %}&nbsp;{{ pesel }}
+    </div>
+    <div class="note">
+        {% trans %}lending.CoE.borrower.reffered_to{% endtrans %}&nbsp;"<b>{% trans %}lending.CoE.borrower.reffered_name{% endtrans %}</b>".
+    </div>
+
+    <div class="paragraph">
+        <h6>&sect;&nbsp;1</h6>
+        <ol type="1">
+            <li>
+                {% trans %}lending.CoE.deal.sect1.entry1{% endtrans %}
+                <ol type="a">
+                    <li>{% trans %}lending.CoE.deal.sect1.entry1_manufacturer{% endtrans %}&nbsp;<b>{{ agreement.assignment.manufacturer }}</b></li>
+                    <li>{% trans %}lending.CoE.deal.sect1.entry1_model{% endtrans %}&nbsp;<b>{{ agreement.assignment.model }}</b></li>
+                    <li>{% trans %}lending.CoE.deal.sect1.entry1_serialNumber{% endtrans %}&nbsp;<b>{{ agreement.assignment.serialNumber }}</b></li>
+                </ol>
+            </li>
+            <li>{% trans %}lending.CoE.deal.sect1.entry2{% endtrans %}</li>
+            <li>{% trans %}lending.CoE.deal.sect1.entry3{% endtrans %}</li>
+            <li>{% trans %}lending.CoE.deal.sect1.entry4{% endtrans %}</li>
+        </ol>
+
+        <h6>&sect;&nbsp;2</h6>
+        <ol type="1">
+            <li>{% trans %}lending.CoE.deal.sect2{% endtrans %}</li>
+        </ol>
+        <h6>&sect;&nbsp;3</h6>
+        <ol type="1">
+            <li>{% trans %}lending.CoE.deal.sect3.entry1{% endtrans %}</li>
+            <li>{% trans %}lending.CoE.deal.sect3.entry2{% endtrans %}</li>
+            <li>{% trans %}lending.CoE.deal.sect3.entry3{% endtrans %}</li>
+        </ol>
+
+        <h6>&sect;&nbsp;4</h6>
+        <ol type="1">
+            <li>{% trans %}lending.CoE.deal.sect4.entry1{% endtrans %}</li>
+            <li>{% trans %}lending.CoE.deal.sect4.entry2{% endtrans %}</li>
+        </ol>
+
+        <h6>&sect;&nbsp;5</h6>
+        <ol type="1">
+            <li>{% trans %}lending.CoE.deal.sect5{% endtrans %}</li>
+        </ol>
+
+        <h6>&sect;&nbsp;6</h6>
+        <ol type="1">
+            <li>{% trans %}lending.CoE.deal.sect6{% endtrans %}</li>
+        </ol>
+
+        <h6>&sect;&nbsp;7</h6>
+        <ol type="1">
+            <li>{% trans %}lending.CoE.deal.sect7{% endtrans %}</li>
+        </ol>
+
+        <h6>&sect;&nbsp;8</h6>
+        <ol type="1">
+            <li>{% trans %}lending.CoE.deal.sect8{% endtrans %}</li>
+        </ol>
+    </div>
+    <table class="signatures">
+        <tr>
+            <td>
+                {% trans %}lending.CoE.signatures.lender{% endtrans %}:
+            </td>
+            <td style="text-align: right;">
+                {% trans %}lending.CoE.signatures.borrower{% endtrans %}:
+            </td>
+        </tr>
+        <tr class="signature">
+            <td>
+                {% if agreement.signedByHelpdesk is null %}
+                    ....................................
+                {% else %}
+                    {{ agreement.helpdeskSigner.name }}&nbsp;{{ agreement.helpdeskSigner.lastName }}
+                {% endif %}
+            </td>
+            <td style="text-align: right;">
+                {% if agreement.signedByUser is null %}
+                    ....................................
+                {% else %}
+                    {{ agreement.assignment.employee.name }}&nbsp;{{ agreement.assignment.employee.lastName }}
+                {% endif %}
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td style="text-align: right;">
+                {% trans %}lending.CoE.signatures.borrower_confirmation{% endtrans %}.<br/>
+                {% trans %}lending.CoE.signatures.borrower{% endtrans %}:
+            </td>
+        </tr>
+        <tr class="signature">
+            <td></td>
+            <td style="text-align: right;">
+                {% if agreement.signedByUser is null %}
+                    ....................................
+                {% else %}
+                    {{ agreement.assignment.employee.name }}&nbsp;{{ agreement.assignment.employee.lastName }}
+                {% endif %}
+            </td>
+        </tr>
+    </table>
+{% endblock %}

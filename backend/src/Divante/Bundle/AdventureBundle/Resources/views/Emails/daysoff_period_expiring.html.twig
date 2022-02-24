@@ -1,0 +1,29 @@
+{% extends 'AdventureBundle:Emails:layout.html.twig' %}
+
+{% block body %}
+    <div>
+        <h3>{% trans %}expiringDaysOffPeriods{% endtrans %}</h3>
+        <table>
+            <tr>
+                <th>{% trans %}employeeID{% endtrans %}</th>
+                <th>{% trans %}agreementType{% endtrans %}</th>
+                <th style="text-align: left">{% trans %}nameAndSurname{% endtrans %}</th>
+                <th>{% trans %}periodID{% endtrans %}</th>
+                <th>{% trans %}dateFrom{% endtrans %}</th>
+                <th>{% trans %}dateTo{% endtrans %}</th>
+                <th></th>
+            </tr>
+            {% for period in periods %}
+            <tr>
+                <td>{{ period.employeeId }}</td>
+                <td>{{ period.contractName }}</td>
+                <td style="text-align: left">{{ period.employeeName }}</td>
+                <td>{{ period.periodId }}</td>
+                <td>{{ period.dateFrom }}</td>
+                <td>{{ period.dateTo }}</td>
+                <td><a href="{{ frontend_app_url }}/#/free-days/{{ period.employeeId }}" class="button-small" target="_blank">{% trans %}goToRequests{% endtrans %}</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+{% endblock %}

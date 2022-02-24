@@ -1,0 +1,10 @@
+<ul>
+    {% for overtimeEntry in entries %}
+    <li>
+        <b>{{ overtimeEntry.projectName }}</b>
+        -
+        {{ overtimeEntry.hours|round(2, 'floor') }}h,&nbsp;{% trans %}rate{% endtrans %}&nbsp;{{ overtimeEntry.percentage }}%
+        ({{ overtimeEntry.timeInfo }})
+    </li>
+    {% endfor %}
+</ul>

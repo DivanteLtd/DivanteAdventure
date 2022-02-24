@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Adventure - Open HRM{% endblock %}</title>
+        <style>
+            @import url('{{ frontend_image_url }}static/fonts/Basier-Circle-regular-webfont/stylesheet.css');
+            .application {
+                font-family: 'basier_circleregular', Fallback, sans-serif !important;
+            }
+            .headline,
+            .title,
+            .subheading {
+                font-family: "basier_circleregular", sans-serif !important;
+            }
+            .body {
+                background: #FFFFFF;
+                font: 18px/1.5 'basier_circleregular', sans-serif !important;
+                font-weight: 500;
+            }
+            h1, h2, h3 { line-height: 1.2; margin: 0 0 .5em; color: #1071ff; font-weight: 600}
+            h1 { font-size: 36px; }
+            h2 { font-size: 34px; margin-bottom: 1em; }
+            h3 { font-size: 28px; margin-bottom: 1em; }
+            p {  line-height: 25px}
+            a { color: #1071ff; }
+            a:hover { text-decoration: none; }
+            li {margin-left: 0;}
+            .button {padding:15px 10px;color:#ffffff !important;background:#1071ff;text-decoration: none;font-size: inherit;width:200px;display:block;text-align: center;}
+            .button-small {padding:5px;color:#ffffff;background:#1071ff;text-decoration: none;font-weight: normal;width:150px;font-size:14px;display:block;text-align: center;}
+            .button:hover,.button-small:hover {background: #1071ff;}
+            .button-big {width:250px;}
+            th,td {font-size: 20px;border-bottom: 1px solid #C9C9C9;text-align: center;padding: 0 10px;}
+            th {font-weight: bold;}
+        </style>
+    </head>
+    <body>
+        <div class="body" >
+            <div style="background: #1071ff;height: 80px;width:100%; display: flex; align-items: center;">
+                <img src="{{ frontend_image_url }}static/img/divante_logopack_white-01.png" alt="Adventure" style="height:80%;">
+            </div>
+            <div style="padding:20px;">
+            {% block body %}{% endblock %}
+            </div>
+            <div style="padding:0 20px;" >
+                {% trans %}regards{% endtrans %},<br>
+                {% trans %}ATeam{% endtrans %}
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,72 @@
+services:
+    # Default and namespace configurations
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: false
+
+    Divante\Bundle\AdventureBundle\:
+        resource: '../../*'
+        exclude: '../../{Entity,Repository,Form}'
+
+    Divante\Bundle\AdventureBundle\Security\Voter\:
+        resource: '../../Security/Voter'
+        tags: [ security.voter ]
+
+    Divante\Bundle\AdventureBundle\MessageHandler\:
+        resource: '../../MessageHandler'
+        tags: [ messenger.message_handler ]
+
+    # Message bus
+
+    Symfony\Component\Messenger\MessageBusInterface:
+        factory: [ '@Divante\Bundle\AdventureBundle\Infrastructure\Messenger\MessageBusCreator', 'createMessageBus' ]
+        class: Divante\Bundle\AdventureBundle\Infrastructure\Messenger\MessageBuss
+
+    adventure.business_event_logger_handler:
+        class: Divante\Bundle\AdventureBundle\Infrastructure\Messenger\Logger\Handler\BusinessEventLoggerHandler
+        arguments:
+            $filename: '%kernel.logs_dir%/%kernel.environment%-message.log'
+
+    adventure.main_handler:
+        class: Divante\Bundle\AdventureBundle\Infrastructure\Messenger\Logger\Handler\BusinessEventLoggerHandler
+        arguments:
+            $filename: '%kernel.logs_dir%/%kernel.environment%.log'
+
+    # Configurations
+
+    Divante\Bundle\AdventureBundle\Infrastructure\Config\RoleQuery:
+        arguments: ['%security.role_hierarchy.roles%']
+
+    Divante\Bundle\AdventureBundle\Infrastructure\Config\FrontendUrlSupplier:
+        arguments:
+            $frontendUrl: "%frontend_app_url%"
+
+    Divante\Bundle\AdventureBundle\Infrastructure\Config\AllowedDomains:
+        arguments:
+            $domains: "%allowed_domains%"
+    Divante\Bundle\AdventureBundle\Infrastructure\Config\EmailConfig:
+        arguments:
+            $emailParameters: "%email%"
+            $fromEmailAddress: "%mailer_from_address%"
+            $systemConfig: '@Divante\Bundle\AdventureBundle\Infrastructure\Config\SystemConfig'
+
+    Divante\Bundle\AdventureBundle\Infrastructure\Mercure\MercureConfig:
+        arguments:
+            $jwtKey: '%mercure_jwt_key%'
+            $mercureUrl: '%mercure_url%'
+
+    # Other
+    Divante\Bundle\AdventureBundle\Security\Core\User\OAuthUserProvider:
+        arguments:
+            $properties: { google: googleId }
+
+    Divante\Bundle\AdventureBundle\Services\UploadReceiver:
+        arguments:
+            $uploadDir: '%upload_dir%'
+
+    Symfony\Component\Mercure\PublisherInterface:
+        class: Symfony\Component\Mercure\Publisher
+        arguments:
+            $hubUrl: '%mercure_publish_url%'
+            $jwtProvider: '@Divante\Bundle\AdventureBundle\Infrastructure\Mercure\JwtProvider'

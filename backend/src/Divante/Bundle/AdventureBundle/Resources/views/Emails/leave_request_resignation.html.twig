@@ -1,0 +1,23 @@
+{% extends 'AdventureBundle:Emails:layout.html.twig' %}
+
+{% block title %}
+    {% trans %}requestResignation{% endtrans %}&nbsp;#{{ request.id }}
+{% endblock %}
+
+{% block body %}
+    <div>
+        <h3>{% trans %}requestResignation{% endtrans %}&nbsp;#{{ request.id }}</h3>
+        <p>
+            <b>{% trans %}applicant{% endtrans %}:&nbsp;{{ request.employee.name }}&nbsp;{{ request.employee.lastName }}</b><br>
+            {% trans %}dateOfSubmission{% endtrans %}:&nbsp;{{ request.updatedAt|date("Y-m-d H:i:s") }}
+        </p>
+        <p>
+            <b>{% trans %}resignationFromDays{% endtrans %}:</b><br>
+            {% include 'AdventureBundle:Emails:leave_day_types.html.twig' with {'request': request} %}
+        </p>
+        <p style="font-size: initial">{% trans %}goToTheApplicationAndAcceptOrRejectTheResignationFromAcceptedRequest{% endtrans %}.</p>
+    </div>
+    <div style="margin-top: 20px;">
+        <a href="{{ frontend_app_url }}/#/requests" class="button">{% trans %}goToRequests{% endtrans %}</a>
+    </div>
+{% endblock %}

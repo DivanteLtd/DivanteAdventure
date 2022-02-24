@@ -1,0 +1,10 @@
+{% extends 'AdventureBundle:Emails:layout.html.twig' %}
+
+{% block title %}
+    {% trans %}accountUnlocked{% endtrans %}
+{% endblock %}
+
+{% block body %}
+    <h3>{% trans %}accountUnlocked{% endtrans %}&nbsp;{{ employee.name }}&nbsp;{{ employee.lastName }}</h3>
+    <p>{% trans %}yourAccountHasBeenUnblocked{% endtrans %}</p>
+{% endblock %}

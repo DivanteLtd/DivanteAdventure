@@ -1,0 +1,23 @@
+{% extends 'AdventureBundle:Emails:layout.html.twig' %}
+
+{% block title %}
+    {% trans %}newRequestForConfirmationOfAdditionalHours{% endtrans %}
+{% endblock %}
+
+{% block body %}
+    <div>
+        <h3>{% trans %}newRequestForConfirmationOfAdditionalHours{% endtrans %}</h3>
+
+        <p>
+            <b>{% trans %}applicant{% endtrans %}:&nbsp;{{ evidence.employee.name }}&nbsp;{{ evidence.employee.lastName }}</b><br>
+        </p>
+        <p>
+            <b>{% trans %}additionalHoursRequested{% endtrans %}:</b><br/>
+            {% include 'AdventureBundle:Emails:overtime_request_new_entry.html.twig' with {'entries': entries} %}
+        </p>
+        <p>{% trans %}goToTheApplicationAndAcceptOrRejectTheRequest{% endtrans %}.</p>
+    </div>
+    <div style="margin-top: 20px;">
+        <a href="{{ frontend_app_url }}/#/requests" class="button">{% trans %}goToRequests{% endtrans %}</a>
+    </div>
+{% endblock %}

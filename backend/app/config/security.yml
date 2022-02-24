@@ -1,0 +1,86 @@
+# To get started with security, check out the documentation:
+# http://symfony.com/doc/current/security.html
+security:
+
+    encoders:
+        FOS\UserBundle\Model\UserInterface: bcrypt
+
+    # Remember to update User::ROLES_LEVELS
+    role_hierarchy:
+        ROLE_HR: ROLE_USER
+        ROLE_MANAGER: ROLE_USER
+        ROLE_TRIBE_MASTER: [ ROLE_MANAGER, ROLE_HR ]
+        ROLE_HELPDESK: ROLE_USER
+        ROLE_SUPER_ADMIN: [ ROLE_TRIBE_MASTER, ROLE_HELPDESK ]
+    providers:
+        fos_userbundle:
+            id: fos_user.user_provider.username
+
+    firewalls:
+
+        login:
+            pattern: ^/login
+            logout: true
+            anonymous: ~
+            stateless: true
+            oauth:
+                require_previous_session: false
+                success_handler: lexik_jwt_authentication.handler.authentication_success
+                failure_handler: lexik_jwt_authentication.handler.authentication_failure
+                resource_owners:
+                    google: "/login/check-google"
+                login_path: /login
+                oauth_user_provider:
+                    service: Divante\Bundle\AdventureBundle\Security\Core\User\OAuthUserProvider
+        api-doc:
+            pattern:   ^/api/doc
+            stateless: true
+            anonymous: ~
+
+        api:
+            pattern:   ^/api
+            stateless: true
+            guard:
+                authenticators:
+                    - lexik_jwt_authentication.jwt_token_authenticator
+
+        slackRedirection:
+            pattern: ^/slack/redirect
+            stateless: true
+            lexik_jwt:
+                authorization_header:
+                    enabled: false
+                query_parameter:
+                    enabled: true
+                    name: token
+                throw_exceptions: false
+
+        main:
+            pattern: ^/
+            anonymous: ~
+            logout_on_user_change: true
+            form_login:
+                provider: fos_userbundle
+                csrf_token_generator: security.csrf.token_manager
+                login_path: /login/
+                check_path: /login/login_check
+            logout:       true
+            oauth:
+                resource_owners:
+                    google:        "/login/check-google"
+                login_path:        /login
+                failure_path:      /login
+                provider:          fos_userbundle
+                oauth_user_provider:
+                     service: Divante\Bundle\AdventureBundle\Security\Core\User\OAuthUserProvider
+
+        refresh:
+            pattern:  ^/api/token/refresh
+            stateless: true
+            anonymous: true
+
+    access_control:
+        - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/api/doc$, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/api, roles: IS_AUTHENTICATED_FULLY }
+        - { path: ^/api/token/refresh, roles: IS_AUTHENTICATED_ANONYMOUSLY }

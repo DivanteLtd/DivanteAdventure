@@ -1,0 +1,108 @@
+env:
+  browser: true
+  es6: true
+extends:
+  - airbnb-base
+  - plugin:vue/recommended
+globals:
+  Atomics: readonly
+  SharedArrayBuffer: readonly
+parserOptions:
+  ecmaVersion: 2018
+  sourceType: module
+  parser: babel-eslint
+plugins:
+  - vue
+rules:
+  guard-for-in: error
+  arrow-parens:
+    - error
+    - as-needed
+  func-names: off
+  space-before-function-paren:
+    - error
+    - never
+  quotes:
+    - error
+    - single
+    - avoidEscape: true
+      allowTemplateLiterals: true
+  brace-style: off
+  comma-dangle:
+    - error
+    - always-multiline
+  no-plusplus: off
+  no-bitwise: off
+  max-len:
+    - error
+    - 120
+    - ignoreComments: true
+      ignoreUrls: true
+      ignoreStrings: true
+      ignoreTemplateLiterals: true
+      ignoreRegExpLiterals: true
+  arrow-body-style: off
+  indent: off
+  no-prototype-builtins: off
+  keyword-spacing: off
+  space-unary-ops: off
+  no-restricted-syntax: off
+  import/named: off
+  import/prefer-default-export: off
+  no-param-reassign: off
+  no-underscore-dangle: off
+  vue/html-indent:
+    - error
+    - 2
+  vue/script-indent:
+    - error
+    - 2
+    - baseIndent: 1
+      switchCase: 1
+  vue/max-attributes-per-line: off
+  vue/html-closing-bracket-spacing: off
+  array-bracket-spacing: off
+  block-spacing: off
+  prefer-destructuring: off
+  no-shadow: off
+  object-curly-newline: off
+  import/no-unresolved: off
+  import/no-named-as-default: off
+  vue/singleline-html-element-content-newline: off
+  vue/attributes-order: off
+  vue/order-in-components:
+    - error
+    - order:
+        - el
+        - name
+        - parent
+        - components
+        - mixins
+        - props
+        - data
+        - computed
+        - watch
+        - methods
+        - LIFECYCLE_HOOKS
+  quote-props:
+    - error
+    - consistent-as-needed
+  vue/html-closing-bracket-newline: off
+  vue/html-self-closing: off
+  import/order: off
+  import/extensions: off
+  no-new: off
+  no-else-return: off
+  vue/no-side-effects-in-computed-properties: off
+  radix: off
+  vue/no-v-html: off
+  no-console: error
+  no-continue: off
+  class-methods-use-this: off
+  no-restricted-globals: off
+  curly:
+    - error
+    - all
+  vue/no-parsing-error:
+    - error
+    - invalid-first-character-of-tag-name: false

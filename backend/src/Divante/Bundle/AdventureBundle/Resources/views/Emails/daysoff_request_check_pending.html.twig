@@ -1,0 +1,22 @@
+{% extends 'AdventureBundle:Emails:layout.html.twig' %}
+{% block body %}
+    <h3>{% trans %}belowIsAListOfRequests{% endtrans %}&nbsp;({{ employeeDaysoffRequest | length }})&nbsp;,&nbsp;{% trans %}thatAreWaitingForApproval{% endtrans %}</h3>
+    <div>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>{% trans %}dateOfSubmission{% endtrans %}</th>
+                <th>{% trans %}acceptor{% endtrans %}</th>
+                <th>{% trans %}applicant{% endtrans %}</th>
+            </tr>
+            {% for request in employeeDaysoffRequest %}
+                <tr>
+                    <td>{{ request.id }}</td>
+                    <td>{{ request.createdAt|date("Y-m-d") }}</td>
+                    <td>{{ request.manager.name }} {{ request.manager.lastname }}</td>
+                    <td>{{ request.period.employee.name }} {{ request.period.employee.lastname }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+{% endblock %}

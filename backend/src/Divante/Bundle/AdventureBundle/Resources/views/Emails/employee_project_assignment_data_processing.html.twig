@@ -1,0 +1,33 @@
+{% extends 'AdventureBundle:Emails:layout.html.twig' %}
+
+{% block title %}
+    {% trans %}informationAboutDataProcessingInTheProject{% endtrans %}&nbsp;{{ projectName }}
+{% endblock %}
+
+{% block body %}
+    <h3>{% trans %}informationAboutDataProcessingInTheProject{% endtrans %}&nbsp;{{ projectName }}</h3>
+    {% if isAssigned %}
+        <p>
+            {% trans %}youHaveBeenAssignedToProject{% endtrans %}&nbsp;{{ projectName }}.&nbsp;{% trans %}onDate{% endtrans %}&nbsp;{{ date }},&nbsp;{% trans %}youStartedProcessingDataInTheProject{% endtrans %}&nbsp;{{ projectName }}.
+        </p>
+    {% else %}
+        <p>
+            {% trans %}youHaveBeenUnassignedFromProject{% endtrans %}&nbsp;{{ projectName }}.&nbsp;{% trans %}onDate{% endtrans %}&nbsp;{{ date }},&nbsp;{% trans %}youStoppedProcessingDataInTheProject{% endtrans %}&nbsp;{{ projectName }}.
+        </p>
+    {% endif %}
+
+    {% if criteria %}
+        <p>{% trans %}typesOfDataProcessedInTheProject{% endtrans %}:</p>
+        <ul>
+            {% for criterion in criteria %}
+                <li>
+                    {% if language == 'pl' %}
+                        {{ criterion.namePl }}
+                    {% else %}
+                        {{ criterion.nameEn }}
+                    {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+{% endblock %}

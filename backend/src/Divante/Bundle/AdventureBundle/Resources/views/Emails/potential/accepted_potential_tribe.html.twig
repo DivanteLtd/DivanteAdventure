@@ -1,0 +1,36 @@
+{% extends 'AdventureBundle:Emails:layout.html.twig' %}
+
+{% block body %}
+    <div>
+        <h3>{% trans %}newPerson{% endtrans %}&nbsp;{{ person.name }}&nbsp;{{ person.lastName }}
+            {% if person.position %}
+            -&nbsp;{{ person.position }}
+            {% endif %}&nbsp;{% trans %}joinsTheCompany{% endtrans %}&nbsp;{{ person.hireDate }}.
+        </h3>
+        <p>
+            <b>
+            {% trans %}newHire.preparing.request1{% endtrans %}<br/>
+            {% trans %}newHire.preparing.request2{% endtrans %}<br/>
+            {% trans %}newHire.preparing.request3{% endtrans %}<br/>
+            {% trans %}newHire.preparing.buddy{% endtrans %}-&nbsp;{{ person.recruiterName }}&nbsp;{{ person.recruiterLastName }}.
+            </b><br/><br/>
+{#            {% trans %}On{% endtrans %}&nbsp;{{ person.welcomeDay }}&nbsp;{% trans %}weInviteThePerson{% endtrans %}&nbsp;{{ person.name }}&nbsp;{{ person.lastName }}&nbsp;{% trans %}newHire.info.welcome{% endtrans %}:<br/>#}
+{#            {% trans %}newHire.schedule.part1{% endtrans %}<br/>#}
+{#            {% trans %}newHire.schedule.part2{% endtrans %}<br/>#}
+{#            {% trans %}newHire.schedule.part3{% endtrans %}<br/>#}
+{#            {% trans %}newHire.schedule.part4{% endtrans %}<br/>#}
+{#            {% trans %}newHire.schedule.part5{% endtrans %}<br/>#}
+{#            {% trans %}newHire.schedule.part6{% endtrans %}<br/>#}
+{#            {% trans %}newHire.schedule.part7{% endtrans %}<br/>#}
+{#            {% trans %}newHire.schedule.part8{% endtrans %}&nbsp;-&nbsp;{{ person.avazaTrainingDate }}&nbsp;{% trans %}newHire.schedule.part9{% endtrans %}<br/><br/>- do odkomentowania w lepszych czasach (jak będą robione spotkania z nowymi osobami)#}
+
+            {% trans %}newHire.info.contact{% endtrans %}<br>
+            {% trans %}Email{% endtrans %}&nbsp;:&nbsp;{{ person.privateEmail }}<br>
+            {% trans %}Phone{% endtrans %}&nbsp;.:&nbsp;{{ person.privatePhone }}<br>
+            {% trans %}newHire.info.address{% endtrans %}<br>
+            {{ person.city }}<br>
+            {{ person.postalCode }}<br>
+            {{ person.street }}
+        </p>
+    </div>
+{% endblock %}

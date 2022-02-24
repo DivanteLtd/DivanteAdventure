@@ -1,0 +1,18 @@
+{% extends 'AdventureBundle:Emails:layout.html.twig' %}
+{# @var password string #}
+{# @var agreement \Divante\Bundle\AdventureBundle\Entity\Hardware\HardwareAgreement #}
+
+{% block body %}
+    <div>
+        <h3>{% trans %}hardwareMails.signature.part1{% endtrans %}</h3>
+        <p>
+            <b>{% trans %}hardwareMails.info.part2{% endtrans %}</b>&nbsp;{{ agreement.name}}&nbsp;{{ agreement.lastName }}<br/>
+            <b>{% trans %}hardware{% endtrans %}</b>&nbsp;{{ agreement.assignment.manufacturer }}&nbsp;{{ agreement.assignment.model }}&nbsp;(S/N&nbsp;{{ agreement.assignment.serialNumber }})<br/>
+        </p>
+        <h4>{% trans %}hardwareMails.signature.part2{% endtrans %}</h4>
+        <div style="font-family: sans-serif; font-size: 1.2em; text-align: center; background-color: white; border: 1px solid black; margin-bottom: .5em">
+            {{ password }}
+        </div>
+    </div>
+    <a href="{{ frontend_app_url }}#/dashboard" class="button button-big" target="_blank">{% trans %}goToAdventure{% endtrans %}</a>
+{% endblock %}

@@ -1,0 +1,21 @@
+parameters:
+  skip:
+    Symplify\CodingStandard\Sniffs\ControlStructure\SprintfOverContactSniff:
+      - 'src/Divante/Bundle/AdventureBundle/Infrastructure/Doctrine/Dbal/*'
+      - 'src/Divante/Bundle/AdventureBundle/Entity/Repository/*'
+
+services:
+  PhpCsFixer\Fixer\ArrayNotation\ArraySyntaxFixer:
+    syntax: short
+  Symplify\CodingStandard\Sniffs\Commenting\AnnotationTypeExistsSniff: ~
+  Symplify\CodingStandard\Fixer\Commenting\ParamReturnAndVarTagMalformsFixer: ~
+  Symplify\CodingStandard\Fixer\Commenting\RemoveEmptyDocBlockFixer: ~
+  Symplify\CodingStandard\Fixer\Commenting\RemoveSuperfluousDocBlockWhitespaceFixer: ~
+  Symplify\CodingStandard\Fixer\ControlStructure\PregDelimiterFixer:
+    delimiter: '/'
+  Symplify\CodingStandard\Fixer\Php\ClassStringToClassConstantFixer: ~
+  Symplify\CodingStandard\Sniffs\ControlStructure\SprintfOverContactSniff:
+    maxConcatCount: 5
+  Symplify\CodingStandard\Sniffs\Debug\CommentedOutCodeSniff: ~
+  Symplify\CodingStandard\Sniffs\Debug\DebugFunctionCallSniff: ~
+  Symplify\CodingStandard\Sniffs\Naming\AbstractClassNameSniff: ~

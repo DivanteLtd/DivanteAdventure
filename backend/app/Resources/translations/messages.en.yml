@@ -1,0 +1,535 @@
+Attention: Attention
+projectName: Project name
+projectType: Project type
+projectEnd: The project has been completed
+projectTypeUndefined: Undefined
+projectTypeImplementation: Implementation
+projectTypeMaintenance: Maintenance
+infoAobutProject: Information about project
+category: Categories of processed data
+persons: People who process data in the project
+historyData: The history of people who processed data in the project
+dataInProject: Data processed in the project
+noCategory: No category
+noAssigne: Currently no one is assigned to the project
+noData: No data
+adventure: This document is from the Adventure - Open HRM system
+projectIsFromTo: Project is from %from% to %to%
+projectIsFrom: Project is from %from%
+toNow: to now
+projectIs: Project is
+projectLasted: Project lasted
+from: from
+to: to
+toThePeriodFrom: To the period from
+Phone: Phone
+Email: Email
+applyForAdditionalHours: apply for additional hours
+scheduledRequestHasBeenConfirmed: Scheduled request has been confirmed
+requestForResignation: Request for resignation
+requestArePending: request are pending
+belowIsAListOfRequests: Below is a list of requests
+thatAreWaitingForApproval: that are waiting for approval
+confirmed: confirmed
+
+informationAboutDataProcessingInTheProject: Information about data processing in the project
+typesOfDataProcessedInTheProject: Types of data processed in the project
+youHaveBeenAssignedToProject: You have been assigned to Project
+onDate: On
+youStartedProcessingDataInTheProject: you started processing data in the project
+youHaveBeenUnassignedFromProject: You have been unassigned from project
+youStoppedProcessingDataInTheProject: you stopped processing data in the project
+accountLocked: Account Locked
+yourAccountHasBeenBlockedDueToUnsuccessfulLoginAttempts: Your account has been blocked due to unsuccessful login attempts. The Adventure team will contact you as soon as possible.
+yourCode: Your Code
+aNewEvidenceHasBeenGenerated: A new evidence has been generated
+applyToPerson: Apply to person
+applyToMonth: Apply to month
+theEvidenceOfAdditionalHoursHasBeenSentAndIsAwaitingApproval: The evidence of additional hours has been sent and is awaiting approval
+theDocumentIsAvailableForDownloadInTheAttachment: The document is available for download in the attachment
+theDocumentWithB2BInvoicesIsAvailableForDownloadInTheAttachment: The document with B2B invoices is available for download in the attachment
+theDocumentWithB2BInvoiceIsAvailableForDownloadInTheAttachment: The document with B2B invoice is available for download in the attachment
+yourRequestForAdditionalHoursHasBeenRejected: Your request for additional hours has been rejected
+extraHoursWereRejected: Extra hours were rejected
+additionalHoursHaveBeenAccepted: Additional hours have been accepted
+contractorReportingAdditionalHours: Contractor reporting additional hours
+informationForTheContractor: Information for the contractor
+informationForAdministration: Information for administration
+personRequestingAdditionalHours: Person requesting additional hours
+yourRequest: Your request
+hasBeen: has been
+fromIndividualDaysOfRequestHasBeen: from individual days of request has been
+fromRequestHasBeen: from request has been
+accepted: accepted
+accepted/: accepted
+rejected: rejected
+rejected2: rejected
+acceptor: Acceptor
+approver: Approver
+Date: Date
+dateOfSubmission: Date of submission
+dateOfReview: Date of review
+dateOfDeletions: Date of deletions
+daysAccepted: Days accepted
+daysUnaccepted: Unaccepted days
+daysRequested: Days requested
+comments: Comments
+goToTheApplicationToCheckTheStatusOfYourDaysOff: Go to the application to check the status of your days off
+goToTheApplicationAndAcceptOrRejectTheRequest: Go to the application and accept or reject the request
+goToTheApplicationAndAcceptOrRejectTheResignationFromAcceptedRequest: Go to the application and accept or reject the resignation from accepted request
+goToDaysOff: Go to days off
+goToRequests: Go to requests
+recordsOfAdditionalHours: Records of additional hours
+recordsOfHours: Records of hours
+regards: Regards
+ATeam: Adventure Team
+none: None
+employersRepresentative: Employer's Representative
+Request: Request
+removed: removed
+byTheApplicant: by the applicant
+applicant: The Applicant
+requestWasAbandoned: request was abandoned
+newRequestForDaysOff: New request for days off
+daysOffRequestHasBeenSubmitted: Days off request has been submitted
+daysOffRequestHasBeenPlanned: Days off request has been planned
+personWantsToResignFromARequest: Person wants to resign from a request
+requestWasRejected: Request was rejected
+requestHasBeenApproved: Request has been approved
+requestResignation: Request resignation
+resignationFromDays: Resignation from days
+resignationFromRequest: Resignation from request
+resignationFromReceivingOvertime: Resignation from receiving overtime
+unacceptedResignationFromDays: Unaccepted resignation from days
+yourResignationFromRequestHasBeenRejected: Your resignation from request has been rejected
+newRequestForConfirmationOfAdditionalHours: New request for confirmation of additional hours
+additionalHoursRequested: Additional hours requested
+rate: rate
+Rate: Rate
+welcomeToAdventure: Welcome to Adventure
+youHaveBeenCorrectlyRegistered: You have been correctly registered
+goToTheApplicationAndCompleteYourProfile: Go to the application and complete your profile
+mainFunctionalities: Main functionalities
+employeeListWithSearchEngine: employee list with search engine
+listOfProjectsAndTeams: list of projects and teams
+employeeProfile: employee profile
+companyStructure: company structure
+daysOff: days off
+newsImportantLinksNotifications: news, important links, notifications
+startTheAdventure: Start the adventure
+evidenceOfHoursOfPerformingCooperationAgreement: Evidence of hours of performing cooperation agreement
+evidenceOfHoursPerformanceOfTheMandateContract: Evidence of hours performance of the mandate contract
+nameAndSurnameOfContractor:  Name and surname of contractor
+nameAndSurnameOfPerformers: Name and surname of performers
+monthAndYear: Month and year
+numberOfHoursOfPerformingTheCommissionContract: Number of hours of performing the commission contract
+numberOfHoursOfServicesRendered: Number of hours of services rendered
+numberOfHoursRendered: Number of hours rendered
+numberOfPaidDaysOff: Number of paid days off
+numberOfUnavailabilityDays: Number of unavailability days
+numberOfUnpaidDaysOff: Number of unpaid days off
+numberOfSickLeaveDays: Number of sick leave days
+totalNumberOfHoursPaid: Total number of hours paid
+withoutFreeHours: Without free hours
+contractor'sSignature: Contractor's signature
+performers'sSignature: Performers's signature
+principal'sSignature: Principal's signature
+hours: hours
+additionalHours: Additional hours
+month: month
+expiringDaysOffPeriods: Expiring holiday periods
+employeeID: Employee ID
+periodID: Period ID
+agreementType: Agreement type
+dateFrom: Date from
+dateTo: Date to
+hasBeenRemovedFemale: has been removed
+hasBeenRemovedMale: has been removed
+thePersonHasBeenRemovedFromTheAdventureSystem: The person has been removed from the Adventure system
+personRemoved: Person removed
+removalAdministrator: Removal Administrator
+because: Because
+couldFemale: could
+couldMale: could
+removePersonMail:
+    part1: "a deleted person will no longer appear in the list of persons in the company, the list of persons assigned to specific tribes, projects etc."
+    part2: "accept requests for days off and overtime will still appear for requests that have already been submitted for approval."
+    part3: "However, it will no longer appear in the list of approvers when submitting a new application."
+    part4: "If removing a person was a mistake, it is possible to revert this action. Please contact the Adventure developers for this."
+
+youReceiveAQuestionSlackTemplate: "*%s* asked a question in category _%s_: \"_%s_\". Please log in to Adventure and answer that question or reject it."
+youReceiveAQuestion: You received a question
+person: person
+Person: Person
+newPerson: The new person
+joinsTheCompany: joins the company
+askedAQuestionInCategoryYouAreResponsible: asked a question in category you are responsible
+contentQuestion: Content of the question
+pleaseUseAdventureFAQModuleToAddThisQuestionWithAnswer: Please use Adventure FAQ module to add this question with answer
+goToFAQModule: Go to FAQ module
+goToAdventure: Go to Adventure
+hardware: Hardware
+startOfCooperation: start of cooperation
+
+hardwareMails:
+  generate:
+    part1: Generate a new hardware lending agreement.
+    part2: Person waiting for hardware
+    part3: Date of the last SnipeIt edition
+    part4: Go to the application to generate agreement
+  info:
+    part1: Hardware can be prepared for release.
+    part2: Person accepting the equipment
+  ready:
+    part1: Hardware lending agreement ready for archiving.
+    part2: document in attachment
+  signature:
+    part1: New lending agreement is available for signature.
+    part2: Use a password to sign the contract
+
+newHire:
+  preparing:
+    hardware: Please prepare a hardware lending agreement.
+    access: Please set up email / Google Drive, Slack, Avaza, Jira / Confluence accounts.
+    place: Please prepare the equipment at the place designated by the Chief / Director / Buddy or prepare the equipment for shipping by courier (DHL Express) to a remote colleague.
+    pack: Please send also a Welcome Pack with the equipment.
+    card: Please prepare an entrance card if person is from Wrocław.
+    documents: Please print the contracts and documents that the recruiter will send in attachments in the next e-mail.
+    shipping: Please post a courier service (DHL Express) with equipment, contracts, documents and a welcome pack if a person will work remotely.
+    request1: Please send an e-mail notification to the IT Support department for additional equipment that is included in the tribe / department budget (monitor 1 / monitor 2 / laptop other than Dell / Android or iOS phone).
+    request2: Standard kit for newcomer includes Dell laptop, keyboard and mouse - no need to report it. Please also inform the Helpdesk team where to prepare the equipment.
+    request3: Please contact Trip by e-mail if you decide to invite a new remote person to the office (trip costs are included in the tribe / department budget).
+    buddy: I would also like to ask you to appoint a buddy and send the information to the hr email address or directly to the recruiter
+  info:
+    tribe: Department / Tribe
+    mail: "Required e-mail address:"
+    contact: "Contact to a new person:"
+    address: "postal address for shipping contract / documents and equipment:"
+    welcome: "to the Welcome Day, which will last until 1:00 p.m."
+    error1: "has no e-mail address set on the Adventure profile."
+    error2: "Please contact this tribe/department to complete it."
+    error3: "Please be informed that the message (content below) must be delivered by the recruiter."
+
+paidDayOff: Paid day off
+unpaidDayOff: Unpaid day off
+holidayLeave: Holiday leave
+unpaidLeave: Unpaid leave
+leaveOnDemand: Leave on demand
+occasionalHolidays: Occasional holidays
+carer"sLeave: Carer's leave
+paidDickDay: Paid sick day
+unpaidSickDay: Unpaid sick day
+receivingOvertime: Receiving overtime
+unavailabilityDay: Unavailability day
+status: status
+resignation: resignation
+Resignation: Resignation
+active: active
+modifiedDay: modified day
+statusOfDayChanged: status of day changed
+on: on
+On: On
+freeDaysAfterOvertime: Taking free days after overtime
+freeDaysAfterAdditionalHours: Taking free days after additional hours
+employer: Employer
+employer2: employer
+orderer: Orderer
+orderer2: Orderer
+contractor: Contractor
+Contract: Contract
+employee: Employee
+performer: Performer
+contractorSignature: Contractor signature
+performerSignature: Performer signature
+employeeSignature: Employee signature
+vatId: Vat ID
+nameAndSurname: Name and surname
+projectCode: Project Code
+numberOfHours: Number of hours
+declaredTime: Declared time
+signatureOfThePersonRequestingAdditionalHours: Signature of the person requesting additional hours
+onBehalfOf: on behalf of
+weInviteThePerson: we invite the person
+
+yourQuestionHasBeenAccepted: Your question has been accepted
+yourQuestionHasBeenRejected: Your question has been rejected
+hasAcceptedYourQuestion: has accepted your question
+hasRejectedYourQuestion: has rejected your question
+youCanSeeAnswerInAdventure: You can see answer to your question in Adventure
+
+slack:
+  feedback:
+    planned_incoming: "Remainder: *%s* has a planned feedback with you in *%s days*."
+    created: "Hi! *%s* has added a new feedback. You can check your feedbacks in your Adventure profile."
+    open_profile: "Open profile"
+  faq:
+    accept: "%s has accepted your question \"%s\" and wrote an answer in Adventure."
+    reject: "%s has rejected your question \"%s\". Rejection reason: _%s_"
+  requests:
+    goToRequests: Go to requests
+    daysFormat: "*Request #%d*\n*Type:* %s\n*Days:* %s"
+    type:
+      freePaid: "Paid free days"
+      freeUnpaid: "Unpaid free days"
+      leavePaid: "Paid leave days"
+      leaveUnpaid: "Unpaid leave days"
+      leaveOvertime: "Receiving Overtime :clock4:"
+      leaveRequest: "Leave on request :zap:"
+      leaveOccasional: "Leave on occasion :wine_glass:"
+      leaveCare: "Care leave :baby:"
+      sickLeavePaid: "Sick leave :face_with_thermometer:"
+      sickLeaveUnpaid: "Unpaid sick leave :face_with_thermometer:"
+      additionalHours: "Time off in lieu :hourglass_flowing_sand:"
+      unavailabilityDay: "Day of unavailability"
+      unknown: "Unknown :confused:"
+    message:
+      createdNewLeaveRequest: "*%s* has created a new request."
+      registeredAdditionalHours: "*%s* has registered taking back additional hours."
+      registeredOvertime: "*%s* has registered taking back overtime."
+      requestAccepted: "*%s* has *accepted* your request. :heavy_check_mark:"
+      requestRejected: "*%s* has *rejected* your request. :x:"
+      requestResigned: "*%s* has *resigned* from request. :x:"
+      resignationRequested: "*%s* wants to *resign* from request. :x:"
+      resignationAccepted: "*%s* has *accepted* your resignation from request. :heavy_check_mark:"
+      resignationDeleted: "*%s* decided to *not resign* from request."
+      resignationRejected: "*%s* has *rejected* your resignation from request. :x:"
+      resignationOvertime: "*%s* has *resign* from receiving overtime. :x:"
+    notification:
+      createdNewLeaveRequest: "[Adventure]%s has created a new request."
+      registeredAdditionalHours: "[Adventure]%s has registered taking back additional hours."
+      registeredOvertime: "[Adventure]%s has registered taking back overtime."
+      requestAccepted: "[Adventure]%s has accepted your request."
+      requestRejected: "[Adventure]%s has rejected your request."
+      requestResigned: "[Adventure]%s has resigned from request."
+      resignationRequested: "[Adventure]%s wants to resign from request."
+      resignationAccepted: "[Adventure]%s has accepted your resignation from request."
+      resignationDeleted: "[Adventure]%s decided to not resign from request."
+      resignationRejected: "[Adventure]%s has rejected your resignation from request."
+      resignationOvertime: "[Adventure]%s has resign from receiving overtime."
+  ping:
+    message: "*Ping!* %s wanted to remind you that you haven't updated status of task \"*%s*\"."
+    link: "Change status"
+  checklist_assign:
+    subject: "Hi! New checklist *%s* that applies to you was created in Adventure."
+    owner: "Hi! New checklist *%s* was created in Adventure and you are marked as a person responsible for that checklist."
+    responsible: "Hi! New checklist *%s* was created in Adventure and you are marked as a person responsible for some tasks in that list."
+    subject_owner: "Hi! New checklist *%s* that applies to you was created in Adventure. You are also marked as a person responsible for that checklist."
+    subject_responsible: "Hi! New checklist *%s* that applies to you was created in Adventure. You are also marked as a person responsible for some tasks in that list."
+    owner_responsible: "Hi! New checklist *%s* was created in Adventure and you are marked as a person responsible for that checklist. You are also marked as a person responsible for some tasks in that list."
+    subject_owner_responsible: "Hi! New checklist *%s* that applies to you was created in Adventure. You are also marked as a person responsible for that checklist and some tasks in it."
+  integration:
+    disconnectMessage: "*%s* has disabled integration of this channel with Adventure. %s will no longer receive notifications here."
+    connectMessage: "%s! From now on you will receive notifications from Adventure here from time to time."
+    projectTemplate: "*%s* project"
+    tribeTemplate: "*%s* tribe"
+    departmentTemplate: "*%s* department"
+    genericTemplate: "*%s*"
+    helloProject: "Hello, members of *%s* project"
+    helloTribe: "Hello, members of *%s* tribe"
+    helloDepartment: "Hello, members of *%s* department"
+    helloGeneric: "Hello, *%s*"
+  status:
+    dayoffUpdate: "*%s %s* got approval of the day off and will not work today."
+    remoteUpdate: "*%s %s* is working remotely today."
+    delegationUpdate: "*%s %s* is on trip today."
+    everyonePresent: "Today everyone in %s should be present."
+    notPresent: "Following people in %s are not present today:\n%s"
+    delegations: "\nFollowing people are on trip today:\n%s"
+    remoteWork: "\nFollowing people are working remotely today:\n%s"
+    projectTemplate: "%s project"
+    departmentTemplate: "%s department"
+    tribeTemplate: "%s tribe"
+  month_short:
+    jan: Jan
+    feb: Feb
+    mar: Mar
+    apr: Apr
+    may: May
+    jun: Jun
+    jul: Jul
+    aug: Aug
+    sep: Sep
+    oct: Oct
+    nov: Nov
+    dec: Dec
+waitingOnHardware: "is waiting on new hardware: "
+would_like_make_new_agreement: 'Would you like prepare new rent agreement?'
+link_to_form: 'Link to form:'
+
+lending:
+  CLC:
+    title: "Lending agreement"
+    header:
+      beforeDate: "Concluded on"
+      afterDate: "in `city` between:"
+    lender:
+      name: "company name"
+      text: "text"
+      reffered_to: "hereinafter referred to as"
+      reffered_name: "Lender"
+    and: "and"
+    borrower:
+      withPesel: "PESEL"
+      reffered_to: "hereinafter referred to as the"
+      reffered_name: "Borrower"
+    deal:
+      sect1:
+        entry1: "The items of lending are:"
+        entry1_manufacturer: "Brand:"
+        entry1_model: "Model:"
+        entry1_serialNumber: "Serial number:"
+        entry2: "entry2"
+        entry3: "entry3"
+        entry4: "entry4"
+      sect2: "sect2"
+      sect3:
+        entry1: "entry1"
+        entry2: "entry2"
+        entry3: "entry3"
+      sect4:
+        entry1: "entry1"
+        entry2: "entry2"
+        entry3: "entry3"
+      sect5: "sect5"
+      sect6: "sect6"
+      sect7: "sect7"
+      sect8: "sect8"
+    signatures:
+      lender: "Lender"
+      borrower: "Borrower"
+      borrower_confirmation: "borrower_confirmation"
+      helpdesk: "helpdesk"
+      helpdesk_confirmation: "helpdesk_confirmation"
+  CoE:
+    title: "Lending agreement"
+    header:
+      beforeDate: "Concluded on"
+      afterDate: "in `city` between:"
+    lender:
+      name: "company name"
+      text: "text"
+      reffered_to: "hereinafter referred to as"
+      reffered_name: "Lender"
+    and: "and"
+    borrower:
+      withPesel: "PESEL"
+      reffered_to: "hereinafter referred to as the"
+      reffered_name: "Employee"
+    deal:
+      sect1:
+        entry1: "The items of lending are:"
+        entry1_manufacturer: "Brand:"
+        entry1_model: "Model:"
+        entry1_serialNumber: "Serial number:"
+        entry2: "entry2"
+        entry3: "entry3"
+        entry4: "entry4"
+      sect2: "sect2"
+      sect3:
+        entry1: "entry1"
+        entry2: "entry2"
+        entry3: "entry3"
+      sect4:
+        entry1: "entry1"
+        entry2: "entry2"
+      sect5: "sect5"
+      sect6: "sect6"
+      sect7: "sect7"
+      sect8: "sect8"
+    signatures:
+      lender: "Lender"
+      borrower: "Employee"
+      borrower_confirmation: "borrower_confirmation"
+      helpdesk: "helpdesk"
+  B2B:
+    title: "Equipment transfer report"
+    header:
+      beforeDate: "concluded on"
+      afterDate: "in `city` between:"
+    lender:
+      title: "Lender"
+      name: "company name"
+      address: "company address"
+    borrower:
+      title: "Recipient"
+      companyName: "Company"
+      nameAndLastName: "Name"
+      headquarters: "Residing"
+      nip: "vat ID"
+    deal:
+      p1: "The following items shall be forwarded:"
+      p1_manufacturer: "Brand:"
+      p1_model: "Model:"
+      p1_serialNumber: "Serial number:"
+      p2: "p2"
+      p3: "p3"
+      p4: "p4"
+      p5: "p5"
+      p6: "p6"
+      p7: "p7"
+      p8: "p8"
+      p9: "p9"
+      p10: "p10"
+    signatures:
+      lender: "Lender"
+      borrower: "Recipient"
+      date: "Date of receipt of the equipment"
+
+yourHardwareLendingAgreement: Your hardware lending agreement
+
+accountUnlocked: 'Unlock account'
+yourAccountHasBeenUnblocked: 'Your account has been unlocked.'
+
+mail:
+  welcome:
+    subject: Welcome to Adventure
+    welcomeHeader: Welcome to Adventure!
+    hi: Hi
+    firstParagraph: Please log in at Adventure. This is our internal platform, where you can find all our employees.
+    secondParagraph: In case of problems, e.g. with logging in or if you have any feedback regards the system, please contact Adventure Team.
+    thirdParagraph: Access to the system is possible only by logging in via your Company Gmail account.
+    listHeader: "As soon as you log in to Adventure:"
+    firstPoint: Fill in your position.
+    secondPoint: Add your profile photo.
+    thirdPoint: Go to the Agreements > General tab on the left, and then read Fire safety/OSH, GDPR and ISO consents and confirm that you have read them. Without confirmation, it will not be possible to use the system.
+    fourthPoint: Go to the Agreements > Marketing tab on the left, and then read the marketing consents for the use of your image for the purpose of company promotion and check which you agree to, and which you do not.
+    fifthPointA: Please contact our Administration Department to fill in your number of available
+    fifthPointB:
+      CoE: leave days
+      B2B: free days
+    fifthPointC: The system allows you to ask your manager to accept your vacation.
+
+workLocation:
+  reportRemote: 'Remote mode days report for people on CoE and CLC'
+  reportTrip: 'Travel days report for people on CoE and CLC'
+  titleResignation: '[Adventure] Resignation from %s'
+  p1: 'List of confirmed days'
+  p2: 'resigned from confirmed days'
+  remoteWork:
+    title: '[Adventure] %s has been confirmed'
+    CoE: 'remote work'
+    CLC: 'period of execution of the order in remote mode'
+    B2B: 'period of providing services in remote mode'
+  businessTrip:
+    title: '[Adventure] %s has been confirmed'
+    CoE: 'business trip'
+    CLC: 'trip'
+    B2B: 'trip'
+
+'CoE': 'CoE'
+'CLC LUMP SUM': 'CLC LUMP SUM'
+'CLC HOURLY': 'CLC HOURLY'
+'B2B LUMP SUM': 'B2B LUMP SUM'
+'B2B HOURLY': 'B2B HOURLY'
+
+evidence:
+  reminder:
+    subject: '[Adventure] Reminder to send the evidence'
+    firstLine: 'Hi'
+    secondLine: 'We want to remind you that you have to send via company the records of your work hours for'
+    thirdLine: 'Please provide us information on the last business day (e.g. for June, deliver to us by 30/06 to 16:00). We also remind you of reporting working time in Avaza. If you have any problem with this topic, please contact your direct manager/team leader'
+    fourthLine: 'If you have any questions feel free to contact example@example.com.'
+  p1: 'We’ve received your invoice and now we’ll process it.'
+  p2: 'We’ll contact you if we have any questions about the invoice or the report.'
+  p3: '*The autoresponder is for invoices. In other matters, we will contact you in a separate message.'
+  p4: '[The message was sent automatically.]'

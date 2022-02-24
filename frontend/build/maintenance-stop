@@ -1,0 +1,3 @@
+#!/bin/sh
+FILE=/var/www/frontend/maintenance.flag
+rm -f $FILE

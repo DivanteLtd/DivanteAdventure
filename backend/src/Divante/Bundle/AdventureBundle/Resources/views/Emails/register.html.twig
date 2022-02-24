@@ -1,0 +1,26 @@
+{% extends 'AdventureBundle:Emails:layout.html.twig' %}
+
+{% block title %}
+    {% trans %}welcomeToAdventure{% endtrans %}!
+{% endblock %}
+
+{% block body %}
+    <div>
+        <h3>{% trans %}youHaveBeenCorrectlyRegistered{% endtrans %}.</h3>
+        <p>{% trans %}goToTheApplicationAndCompleteYourProfile{% endtrans %}.</p>
+        <p>
+            <b>{% trans %}mainFunctionalities{% endtrans %}:</b><br>
+            <ul>
+                <li>{% trans %}employeeListWithSearchEngine{% endtrans %}</li>
+                <li>{% trans %}listOfProjectsAndTeams{% endtrans %}</li>
+                <li>{% trans %}employeeProfile{% endtrans %}</li>
+                <li>{% trans %}companyStructure{% endtrans %}</li>
+                <li>{% trans %}daysOff{% endtrans %}</li>
+                <li>{% trans %}newsImportantLinksNotifications{% endtrans %}</li>
+            </ul>
+        </p>
+    </div>
+    <div style="margin-top: 20px;">
+        <a href="{{ frontend_app_url }}" class="button">{% trans %}startTheAdventure{% endtrans %}</a>
+    </div>
+{% endblock %}

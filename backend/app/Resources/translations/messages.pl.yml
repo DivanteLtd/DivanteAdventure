@@ -1,0 +1,535 @@
+Attention: Uwaga
+projectName: Nazwa projektu
+projectType: Typ projektu
+projectEnd: Projekt został zakończony
+projectTypeUndefined: Niezdefiniowany
+projectTypeImplementation: Wdrożeniowy
+projectTypeMaintenance: Utrzymaniowy
+infoAobutProject: Informacje o projekcie
+category: Kategorie przetwarzanych danych
+persons: Osoby przetwarzające dane w projekcie
+historyData: Historia osób, które przetwarzały dane w projekcie
+dataInProject: Dane przetwarzane w projekcie
+noCategory: Brak kategorii
+noAssigne: Obecnie nikt nie jest przypisany do projektu
+noData: Brak danych
+adventure: Ten dokument pochodzi z systemu Adventure - Open HRM
+projectIsFromTo: Projekt trwa od %from% do %to%
+projectIsFrom: Project trwa od %from%
+toNow: do teraz
+projectIs: Projekt trwa
+projectLasted: Projekt trwał
+from: od
+to: do
+toThePeriodFrom: Do okresu od
+Phone: Telefon
+Email: Email
+applyForAdditionalHours: wnioskuje o dodatkowe godziny
+scheduledRequestHasBeenConfirmed: Zaplanowany wniosek został potwierdzony
+requestForResignation: Wniosek o rezygnację
+requestArePending: wniosków czeka na rozpatrzenie
+belowIsAListOfRequests: Poniżej znajduje się lista wniosków
+thatAreWaitingForApproval: które czekają na rozpatrzenie
+confirmed: potwierdziła
+
+informationAboutDataProcessingInTheProject: Informacja o przetwarzaniu danych w projekcie
+typesOfDataProcessedInTheProject: Typy danych przetwarzanych w projekcie
+youHaveBeenAssignedToProject: Zostałeś/aś przypisany/a do Projektu
+onDate: Z dniem
+youStartedProcessingDataInTheProject: zacząłeś/aś przetwarzać dane w projekcie
+youHaveBeenUnassignedFromProject: Zostałeś/aś wypisany/a z projektu
+youStoppedProcessingDataInTheProject: przestałeś przetwarzać dane w projekcie
+accountLocked: Blokada konta
+yourAccountHasBeenBlockedDueToUnsuccessfulLoginAttempts: Twoje konto zostało zablokowane z powodu nieudanych prób logowania. Zespół Adventure skontaktuje się z Tobą w tej sprawie najszybciej jak to będzie możliwe.
+yourCode: Twój kod
+aNewEvidenceHasBeenGenerated: Wygenerowano nową ewidencję godzin
+applyToPerson: Dotyczy osoby
+applyToMonth: Dotyczy miesiąca
+theEvidenceOfAdditionalHoursHasBeenSentAndIsAwaitingApproval: Ewidencja dodatkowych godzin została wysłana i oczekuje na akcpetację
+theDocumentIsAvailableForDownloadInTheAttachment: Dokument jest dostępny do pobrania w załączniku
+theDocumentWithB2BInvoicesIsAvailableForDownloadInTheAttachment: Dokument wraz z fakturami B2B jest dostępny do pobrania w załączniku
+theDocumentWithB2BInvoiceIsAvailableForDownloadInTheAttachment: Dokument wraz z fakturą B2B jest dostępny do pobrania w załączniku
+yourRequestForAdditionalHoursHasBeenRejected: Twój wniosek o dodatkowe godziny został odrzucony
+extraHoursWereRejected: Dodatkowe godziny zostały odrzucone
+additionalHoursHaveBeenAccepted: Dodatkowe godziny zostały zaakceptowane
+contractorReportingAdditionalHours: Zleceniobiorca zgłaszający dodatkowe godziny
+informationForTheContractor: Informacja dla zleceniobiorcy
+informationForAdministration: Informacja dla administracji
+personRequestingAdditionalHours: Osoba zlecająca dodatkowe godziny
+yourRequest: Twój wniosek
+hasBeen: został
+fromIndividualDaysOfRequestHasBeen: z poszczególnych dni wniosku została
+fromRequestHasBeen: z wniosku została
+accepted: zaakceptowany
+accepted/: zaakceptowana
+rejected: odrzucony
+rejected2: odrzucona
+acceptor: Akceptujący
+approver: Zatwierdzający
+Date: Data
+dateOfSubmission: Data złożenia
+dateOfReview: Data rozpatrzenia
+dateOfDeletions: Data usunięcia
+daysAccepted: Zaakceptowane dni
+daysUnaccepted: Niezaakceptowane dni
+daysRequested: Wnioskowane dni
+comments: Uwagi
+goToTheApplicationToCheckTheStatusOfYourDaysOff: Przejdź do aplikacji by sprawdzić stan swoich dni wolnych
+goToTheApplicationAndAcceptOrRejectTheRequest: Przejdź do aplikacji i zaakceptuj lub odrzuć wniosek
+goToTheApplicationAndAcceptOrRejectTheResignationFromAcceptedRequest: Przejdź do aplikacji i zaakceptuj lub odrzuć rezygnacje z zaakceptowanego wniosku
+goToDaysOff: Przejdź do dni wolnych
+goToRequests: Przejdź do wniosków
+recordsOfAdditionalHours: Ewidencja godzin dodatkowych
+recordsOfHours: Ewidencja godzin
+regards: Pozdrawiamy
+ATeam: Ekipa Adventure
+none: Brak
+employersRepresentative: Pełnomocnik Pracodawcy
+Request: Wniosek
+removed: usunięty
+byTheApplicant: przez wnioskującego
+applicant: Wnioskujący
+requestWasAbandoned: zrezygnowano z wniosku
+newRequestForDaysOff: Nowy wniosek o dni wolne
+daysOffRequestHasBeenSubmitted: Złożono wniosek o dni wolne
+daysOffRequestHasBeenPlanned: Zaplanowano wniosek o dni wolne
+personWantsToResignFromARequest: Złożono prośbę o rezygnację z wniosku
+requestWasRejected: Wniosek został odrzucony
+requestHasBeenApproved: Wniosek został zaakceptowany
+requestResignation: Rezygnacja z wniosku
+resignationFromDays: Rezygnacja z dni
+resignationFromRequest: Rezygnacja z wniosku
+resignationFromReceivingOvertime: Rezygnacja z odbierania nagodzin
+unacceptedResignationFromDays: Niezaakceptowano rezygnacji z dni
+yourResignationFromRequestHasBeenRejected: Rezygnacja została odrzucona
+newRequestForConfirmationOfAdditionalHours: Nowy wniosek o potwierdzenie dodatkowych godzin
+additionalHoursRequested: Wnioskowane dodatkowe godziny
+rate: stawka
+Rate: Stawka
+welcomeToAdventure: Witaj w Adventure
+youHaveBeenCorrectlyRegistered: Zostałeś poprawnie zarejestrowany
+goToTheApplicationAndCompleteYourProfile: Go to the application and complete your profile
+mainFunctionalities: Główne funkcjonalności
+employeeListWithSearchEngine: lista pracowników wraz z wyszukiwarką
+listOfProjectsAndTeams: lista projektów i zespołów
+employeeProfile: profil pracownika
+companyStructure: struktura firmy
+daysOff: dni wolne
+newsImportantLinksNotifications: newsy, ważne linki, powiadomienia
+startTheAdventure: Rozpocznij przygodę
+evidenceOfHoursOfPerformingCooperationAgreement: Ewidencja godzin wykonania umowy o współpracy
+evidenceOfHoursPerformanceOfTheMandateContract: Ewidencja godzin wykonania umowy zlecenie
+nameAndSurnameOfContractor:  Imię i nazwisko Zleceniobiorcy
+nameAndSurnameOfPerformers: Imię i nazwisko Wykonawcy
+monthAndYear: Miesiąc i rok
+numberOfHoursOfPerformingTheCommissionContract: Liczba godzin wykonywania umowy zlecenie
+numberOfHoursOfServicesRendered: Liczba godzin wykonanych usług
+numberOfHoursRendered: Liczba wykonanych godzin
+numberOfPaidDaysOff: Liczba płatnych dni wolnych
+numberOfUnavailabilityDays: Liczba dni niedostępności
+numberOfUnpaidDaysOff: Liczba bezpłatnych dni wolnych
+numberOfSickLeaveDays: Liczba dni zwolnienia chorobowego
+totalNumberOfHoursPaid: Liczba godzin płatnych ogółem
+withoutFreeHours: Bez godzin wolnych
+contractor'sSignature: Podpis zleceniobiorcy
+performers'sSignature: Podpis wykonawcy
+principal'sSignature: Podpis zleceniodawcy
+hours: godzin
+additionalHours: Godziny dodatkowe
+month: miesiąc
+expiringDaysOffPeriods: Wygasające okresy dni wolnych
+employeeID: ID Pracownika
+periodID: ID okresu
+agreementType: Typ umowy
+dateFrom: Data od
+dateTo: Data do
+hasBeenRemovedFemale: została usunięta
+hasBeenRemovedMale: został usunięty
+thePersonHasBeenRemovedFromTheAdventureSystem: Osoba została usunięta z systemu Adventure
+personRemoved: Osoba usunięta
+removalAdministrator: Administrator usuwający
+because: Ponieważ
+couldFemale: mogła
+couldMale: mógł
+removePersonMail:
+  part1: "Usunięta osoba przestanie wyświetlać się na liście osób w firmie, liście osób przypisanych do poszczególnych plemion, projektów itd."
+  part2: "akceptować wnioski o dni wolne oraz nadgodziny, będzie wciąż wyświetlać się przy wnioskach, które dotychczas przekazano jej do akceptacji."
+  part3: "Nie wyświetli się już jednak na liście osób akceptujących przy składaniu nowego wniosku."
+  part4: "Jeżeli usunięcie osoby było błędem, możliwe jest cofnięcie tej akcji. W tym celu prosimy o kontakt z developerami Adventure."
+
+youReceiveAQuestionSlackTemplate: "{0}*%s* zadał pytanie w kategorii _%s_: \"_%s_\". Prosimy o zalogowanie się do Adventure i umieszczenie odpowiedzi na pytanie lub odrzucenie go.|{1}*%s* zadała pytanie w kategorii _%s_: \"_%s_\". Prosimy o zalogowanie się do Adventure i umieszczenie odpowiedzi na pytanie lub odrzucenie go.|{-1}*%s* zadał(a) pytanie w kategorii _%s_: \"_%s_\". Prosimy o zalogowanie się do Adventure i umieszczenie odpowiedzi na pytanie lub odrzucenie go."
+youReceiveAQuestion: Otrzymałeś pytanie
+person: osoba
+Person: Osoba
+newPerson: Nowa osoba
+joinsTheCompany: dołącza do firmy
+askedAQuestionInCategoryYouAreResponsible: zadała pytanie w ramach kategorii za którą jesteś odpowiedzialny/a
+contentQuestion: Treść pytania
+pleaseUseAdventureFAQModuleToAddThisQuestionWithAnswer: Użyj modułu FAQ Adventure, żeby dodać to pytanie z odpowiedzią
+goToFAQModule: Przejdź to modułu FAQ
+goToAdventure: Idź do Adventure
+hardware: Sprzęt
+startOfCooperation: start współpracy
+
+hardwareMails:
+  generate:
+    part1: Wygeneruj nową umowę użyczenia sprzętu.
+    part2: Osoba oczekująca na sprzęt
+    part3: Data ostatniej edycji w SnipeIt
+    part4: Przejdź do aplikacji by wygenerować umowę
+  info:
+    part1: Sprzęt można przygotować do wydania.
+    part2: Osoba przyjmująca sprzęt
+  ready:
+    part1: Umowa użyczenia sprzętu gotowa do archiwizacji.
+    part2: dokument w załączniku
+  signature:
+    part1: Nowa umowa użyczenia jest dostępna do podpisania.
+    part2: Do podpisania umowy użyj hasła
+
+newHire:
+  preparing:
+    hardware: Proszę o przygotowanie umowy użyczenia sprzętu.
+    access: Proszę o założenie kont email/Google Drive, Slack, Avaza, Jira/Confluence.
+    place: Proszę o przygotowanie sprzętu w miejscu wyznaczonym przez Wodza/Dyrektora/Opiekuna lub przygotowanie sprzętu do wysyłki kurierem (DHL Express) współpracownikowi zdalnemu.
+    pack: Proszę o wysłanie także Welcome Packa razem ze sprzętem.
+    card: Proszę o przygotowanie karty wejściowej jeśli osoba jest z Wrocławia.
+    documents: Proszę o wydrukowanie umów i dokumentów, które rekruter prześle w załącznikach w kolejnym mailu.
+    shipping: Proszę o nadanie przesyłki kurierskiej (DHL Express) ze sprzętem, umowami, dokumentami i welcome packiem w przypadku współpracownika zdalnego.
+    request1: Proszę o ewentualne zgłoszenie mailowe do działu IT Support dodatkowego sprzętu, który wchodzi w budżet plemienia/działu (monitor 1 / monitor 2 / laptop inny niż Dell / telefon Android lub iOS).
+    request2: W standardowym zestawie dla nowej osoby jest laptop Dell, klawiatura i myszka - tego nie trzeba zgłaszać. Proszę również o poinformowanie zespołu Helpdesk, w którym miejscu mają przygotować sprzęt.
+    request3: Proszę o kontakt mailowy z Trip jeśli zdecydujesz o zaproszeniu nowej osoby zdalnej do biura (koszty podróży wchodzą w budżet plemienia/działu).
+    buddy: Proszę także o wyznaczenie opiekuna i przesłanie informacji na adres mailowy hr lub bezpośrednio do rekrutera
+  info:
+    tribe: Dział/Plemię
+    mail: "Wymagany adres mailowy:"
+    contact: "Kontakt do nowej osoby:"
+    address: "adres pocztowy do wysyłki umowy/dokumentów i sprzętu:"
+    welcome: "na Welcome Day, który potrwa do godz. 13:00"
+    error1: "nie ma ustawionego adresu mailowego na profilu Adventure."
+    error2: "Proszę o kontakt z tym działem w celu jego uzupełnienia."
+    error3: "Informujemy, że wiadomość (treść poniżej) musi być dostarczona przez rekrutera."
+
+paidDayOff: Dzień wolny płatny
+unpaidDayOff: Dzień wolny bezpłatny
+holidayLeave: Urlop wypoczynkowy
+unpaidLeave: Urlop bezpłatny
+leaveOnDemand: Urlop na żądanie
+occasionalHolidays: Urlop okolicznościowy
+carer'sLeave: Urlop opiekuńczy
+paidDickDay: Dzień chorobowy płatny
+unpaidSickDay: Dzień chorobowy bezpłatny
+receivingOvertime: Odbieranie nadgodzin
+unavailabilityDay: Dzień niedostępności
+status: status
+resignation: rezygnacja
+Resignation: Rezygnacja
+active: aktywny
+modifiedDay: dzień zmodyfikowany
+statusOfDayChanged: zmieniono status dnia
+on: na
+On: Dnia
+freeDaysAfterOvertime: Odbieranie nadgodzin
+freeDaysAfterAdditionalHours: Odbieranie godzin dodatkowych
+employer: Pracodawca
+employer2: pracodawcy
+orderer: Zleceniodawca
+orderer2: Zleceniodawcy
+contractor: Zleceniobiorca
+Contract: Kontrakt
+employee: Pracownik
+performer: Wykonawca
+contractorSignature: Podpis Zleceniobiorcy
+performerSignature: Podpis Wykonawcy
+employeeSignature: Podpis Pracownika
+vatId: NIP
+nameAndSurname: Imię i nazwisko
+projectCode: Kod projektu
+numberOfHours: Liczba godzin
+declaredTime: Deklarowany czas
+signatureOfThePersonRequestingAdditionalHours: Podpis osoby zlecającej dodatkowe godziny
+onBehalfOf: w imieniu
+weInviteThePerson: zapraszamy osobę
+
+yourQuestionHasBeenAccepted: Twoje pytanie zostało zaakceptowane
+yourQuestionHasBeenRejected: Twoje pytanie zostało odrzucone
+hasAcceptedYourQuestion: zaakceptował(a) Twoje pytanie
+hasRejectedYourQuestion: odrzucił(a) Twoje pytanie
+youCanSeeAnswerInAdventure: Możesz zobaczyć odpowiedź na swoje pytanie w Adventure
+
+slack:
+  feedback:
+    planned_incoming: "Przypomnienie: *%s* ma zaplanowany feedback z Tobą za *%s dni*."
+    created: "{0}Hej! *%s* utworzył nowy feedback. Możesz sprawdzić swoje feedbacki na swoim profilu w Adventure.|{1}Hej! *%s* utworzyła nowy feedback. Możesz sprawdzić swoje feedbacki na swoim profilu w Adventure.|{-1}Hej! *%s* utworzył(a) nowy feedback. Możesz sprawdzić swoje feedbacki na swoim profilu w Adventure."
+    open_profile: "Otwórz profil"
+  faq:
+    accept: "{0}%s zaakceptował Twoje pytanie \"%s\" i umieścił odpowiedź w Adventure.|{1}%s zaakceptowała Twoje pytanie \"%s\" i umieściła odpowiedź w Adventure.|{-1}%s zaakceptował(a) Twoje pytanie \"%s\" i umieścił(a) odpowiedź w Adventure."
+    reject: "{0}%s odrzucił Twoje pytanie \"%s\". Powód: _%s_|{1}%s odrzuciła Twoje pytanie \"%s\". Powód: _%s_|{-1}%s odrzucił(a) Twoje pytanie \"%s\". Powód: _%s_"
+  requests:
+    goToRequests: Przejdź do wniosków
+    daysFormat: "*Wniosek #%d*\n*Typ:* %s\n*Dni:* %s"
+    type:
+      freePaid: "Płatne dni wolne"
+      freeUnpaid: "Bezpłatne dni wolne"
+      leavePaid: "Urlop płatny"
+      leaveUnpaid: "Urlop bezpłatny"
+      leaveOvertime: "Odbieranie nadgodzin :clock4:"
+      leaveRequest: "Urlop na żądanie :zap:"
+      leaveOccasional: "Urlop okolicznościowy :wine_glass:"
+      leaveCare: "Opieka nad dzieckiem :baby:"
+      sickLeavePaid: "Dzień chorobowy :face_with_thermometer:"
+      sickLeaveUnpaid: "Bezpłątny dzień chorobowy :face_with_thermometer:"
+      additionalHours: "Odbieranie godzin dodatkowych :hourglass_flowing_sand:"
+      unavailabilityDay: "Dzień niedostępności"
+      unknown: "Nieznany :confused:"
+    message:
+      createdNewLeaveRequest: "{0}*%s* utworzył nowy wniosek.|{1}*%s* utworzyły nowy wniosek.|{-1}*%s* utworzył(a) nowy wniosek."
+      registeredAdditionalHours: "{0}*%s* zarejestrował odbieranie dodatkowych godzin.|{1}*%s* zarejestrowała odbieranie dodatkowych godzin.|{-1}*%s* zarejestrował(a) odbieranie dodatkowych godzin."
+      registeredOvertime: "{0}*%s* zarejestrował odbieranie nadgodzin.|{1}*%s* zarejestrowała odbieranie nadgodzin.|{-1}*%s* zarejestrował(a) odbieranie nadgodzin."
+      requestAccepted: "{0}*%s* *zaakceptował* Twój wniosek. :heavy_check_mark:|{1}*%s* *zaakceptowała* Twój wniosek. :heavy_check_mark:|{-1}*%s* *zaakceptował(a)* Twój wniosek. :heavy_check_mark:"
+      requestRejected: "{0}*%s* *odrzucił* Twój wniosek. :x:|{1}*%s* *odrzuciła* Twój wniosek. :x:|{-1}*%s* *odrzucił(a)* Twój wniosek. :x:"
+      requestResigned: "{0}*%s* *zrezygnował* z wniosku. :x:|{1}*%s* *zrezygnowała* z wniosku. :x:|{-1}*%s* *zrezygnował(a)* z wniosku. :x:"
+      resignationRequested: "*%s* chce *zrezygnować* z wniosku o czas wolny. :x:"
+      resignationAccepted: "{0}*%s* *zaakceptował* Twoją rezygnację z wniosku. :heavy_check_mark:|{1}*%s* *zaakceptowała* Twoją rezygnację z wniosku. :heavy_check_mark:|{-1}*%s* *zaakceptował(a)* Twoją rezygnację z wniosku. :heavy_check_mark:"
+      resignationDeleted: "{0}*%s* zdecydował *nie rezygnować* z wniosku.|{1}*%s* zdecydowała *nie rezygnować* z wniosku.|{-1}*%s* zdecydował(a) *nie rezygnować* z wniosku."
+      resignationRejected: "{0}*%s* *odrzucił* Twoją rezygnację z wniosku. :x:|{1}*%s* *odrzuciła* Twoją rezygnację z wniosku. :x:|{-1}*%s* *odrzucił(a)* Twoją rezygnację z wniosku. :x:"
+      resignationOvertime: "*%s* *zrezygnował* z odbierania nadgodzin. :x:"
+    notification:
+      createdNewLeaveRequest: "{0}[Adventure]%s utworzył nowy wniosek.|{1}[Adventure]%s utworzyły nowy wniosek.|{-1}[Adventure]%s utworzył(a) nowy wniosek."
+      registeredAdditionalHours: "{0}[Adventure]%s zarejestrował odbieranie dodatkowych godzin.|{1}[Adventure]%s zarejestrowała odbieranie dodatkowych godzin.|{-1}[Adventure]%s zarejestrował(a) odbieranie dodatkowych godzin."
+      registeredOvertime: "{0}[Adventure]%s zarejestrował odbieranie nadgodzin.|{1}[Adventure]%s zarejestrowała odbieranie nadgodzin.|{-1}[Adventure]%s zarejestrował(a) odbieranie nadgodzin."
+      requestAccepted: "{0}[Adventure]%s zaakceptował Twój wniosek.|{1}[Adventure]%s zaakceptowała Twój wniosek.|{-1}[Adventure]%s zaakceptował(a) Twój wniosek."
+      requestRejected: "{0}[Adventure]%s odrzucił* Twój wniosek.|{1}[Adventure]%s odrzuciła* Twój wniosek.|{-1}[Adventure]%s odrzucił(a)* Twój wniosek."
+      requestResigned: "{0}[Adventure]%s zrezygnował z wniosku.|{1}[Adventure]%s zrezygnowała z wniosku.|{-1}[Adventure]%s zrezygnował(a) z wniosku."
+      resignationRequested: "[Adventure]%s chce zrezygnować z wniosku."
+      resignationAccepted: "{0}[Adventure]%s zaakceptował Twoją rezygnację z wniosku.|{1}[Adventure]%s zaakceptowała Twoją rezygnację z wniosku.|{-1}[Adventure]%s zaakceptował(a) Twoją rezygnację z wniosku."
+      resignationDeleted: "{0}[Adventure]%s zdecydował nie rezygnować z wniosku.|{1}[Adventure]%s zdecydowała nie rezygnować z wniosku.|{-1}[Adventure]%s zdecydował(a) nie rezygnować z wniosku."
+      resignationRejected: "{0}[Adventure]%s odrzucił Twoją rezygnację z wniosku.|{1}[Adventure]%s odrzuciła Twoją rezygnację z wniosku.|{-1}[Adventure]%s odrzucił(a) Twoją rezygnację z wniosku."
+      resignationOvertime: "{0}[Adventure]%s zrezygnował z odbierania nadgodzin.|{1}[Adventure]%s zrezygnowała z odbierania nadgodzin.|{-1}[Adventure]%s zrezygnował(a) z odbierania nadgodzin."
+  ping:
+    message: "*Ping!* %s prosi, aby przypomnieć Ci o konieczności aktualizacji statusu zadania \"*%s*\"."
+    link: "Zmień status"
+  checklist_assign:
+    subject: "Hej! Utworzono w Adventure nową listę kontrolną \"*%s*\", która Cię dotyczy."
+    owner: "{0}Hej! Utworzono w Adventure nową listę kontrolną \"*%s*\" i zostałeś w niej oznaczony jako osoba odpowiedzialna.|{1}Hej! Utworzono w Adventure nową listę kontrolną \"*%s*\" i zostałaś w niej oznaczona jako osoba odpowiedzialna.|{-1}Hej! Utworzono w Adventure nową listę kontrolną \"*%s*\" i zostałeś(aś) w niej oznaczony(a) jako osoba odpowiedzialna."
+    responsible: "{0}Hej! Utworzono w Adventure nową listę kontrolną \"*%s*\" i zostałeś w niej oznaczony jako osoba odpowiedzialna za niektóre zadania.|{1}Hej! Utworzono w Adventure nową listę kontrolną \"*%s*\" i zostałaś w niej oznaczona jako osoba odpowiedzialna za niektóre zadania.|{-1}Hej! Utworzono w Adventure nową listę kontrolną \"*%s*\" i zostałeś(aś) w niej oznaczony(a) jako osoba odpowiedzialna za niektóre zadania."
+    subject_owner: "{0}Hej! Utworzono w Adventure nową listę kontrolną \"*%s*\", która Cię dotyczy. Jesteś w niej również oznaczony jako osoba odpowiedzialna.|{1}Hej! Utworzono w Adventure nową listę kontrolną \"*%s*\", która Cię dotyczy. Jesteś w niej również oznaczona jako osoba odpowiedzialna.|{-1}Hej! Utworzono w Adventure nową listę kontrolną \"*%s*\", która Cię dotyczy. Jesteś w niej również oznaczony(a) jako osoba odpowiedzialna."
+    subject_responsible: "{0}Hej! Utworzono w Adventure nową listę kontrolną \"*%s*\", która Cię dotyczy. Jesteś w niej również oznaczony jako osoba odpowiedzialna za niektóre zadania.|{1}Hej! Utworzono w Adventure nową listę kontrolną \"*%s*\", która Cię dotyczy. Jesteś w niej również oznaczona jako osoba odpowiedzialna za niektóre zadania.|{-1}Hej! Utworzono w Adventure nową listę kontrolną \"*%s*\", która Cię dotyczy. Jesteś w niej również oznaczony(a) jako osoba odpowiedzialna za niektóre zadania."
+    owner_responsible: "{0}Hej! Utworzono w Adventure nową listę kontrolną \"*%s*\" i zostałeś w niej oznaczony jako osoba odpowiedzialna za listę, a także za niektóre zadania.|{1}Hej! Utworzono w Adventure nową listę kontrolną \"*%s*\" i zostałaś w niej oznaczona jako osoba odpowiedzialna za listę, a także za niektóre zadania.|{-1}Hej! Utworzono w Adventure nową listę kontrolną \"*%s*\" i zostałeś(aś) w niej oznaczony(a) jako osoba odpowiedzialna za listę, a także za niektóre zadania."
+    subject_owner_responsible: "{0}Hej! Utworzono w Adventure nową listę kontrolną \"*%s*\", która Cię dotyczy. Jesteś w niej również oznaczony jako osoba odpowiedzialna za listę, a także za niektóre zadania.|{1}Hej! Utworzono w Adventure nową listę kontrolną \"*%s*\", która Cię dotyczy. Jesteś w niej również oznaczona jako osoba odpowiedzialna za listę, a także za niektóre zadania.|{-1}Hej! Utworzono w Adventure nową listę kontrolną \"*%s*\", która Cię dotyczy. Jesteś w niej również oznaczony(a) jako osoba odpowiedzialna za listę, a także za niektóre zadania."
+  integration:
+    disconnectMessage: "*%s* rozłączył(a) integrację tego kanału z Adventure. %s nie będzie już otrzymywać tu powiadomień."
+    connectMessage: "{0}%s! Od teraz będziesz od czasu do czasu otrzymywać tu powiadomienia z Adventure.|{1}%s! Od teraz będziecie od czasu do czasu otrzymywać tu powiadomienia z Adventure."
+    projectTemplate: "Projekt *%s*"
+    tribeTemplate: "Plemię *%s*"
+    departmentTemplate: "Dział *%s*"
+    genericTemplate: "*%s*"
+    helloProject: "Witajcie, członkowie projektu *%s*"
+    helloTribe: "Witajcie, członkowie plemienia *%s*"
+    helloDepartment: "Witajcie, członkowie działu *%s*"
+    helloGeneric: "Witaj, *%s*"
+  status:
+    dayoffUpdate: "{0}*%s %s* otrzymał zgodę na dzień wolny i nie będzie dziś pracował.|{1}*%s %s* otrzymała zgodę na dzień wolny i nie będzie dziś pracowała.|{-1}*%s %s* otrzymał(a) zgodę na dzień wolny i nie będzie dziś pracował(a)."
+    remoteUpdate: "{0}*%s %s* będzie dziś pracował zdalnie.|{1}*%s %s* będzie dziś pracowała zdalnie.|{-1}*%s %s* będzie dziś pracować zdalnie."
+    delegationUpdate: "*%s %s* jest dziś w podróży."
+    everyonePresent: "Dziś wszyscy w %s powinni być obecni."
+    notPresent: "Poniższe osoby w %s nie są dziś obecne:\n%s"
+    delegations: "\nPoniższe osoby są dziś w podróży:\n%s"
+    remoteWork: "\nPoniższe osoby pracują dziś zdalnie:\n%s"
+    projectTemplate: "projekcie %s"
+    departmentTemplate: "dziale %s"
+    tribeTemplate: "plemieniu %s"
+  month_short:
+    jan: Jan
+    feb: Feb
+    mar: Mar
+    apr: Apr
+    may: May
+    jun: Jun
+    jul: Jul
+    aug: Aug
+    sep: Sep
+    oct: Oct
+    nov: Nov
+    dec: Dec
+waitingOnHardware: "czeka na nowy sprzęt:"
+would_like_make_new_agreement: "Zaistniała potrzeba sporządzenia nowej umowy użyczenia."
+link_to_form: 'Link do formularza:'
+
+lending:
+  CLC:
+    title: "Umowa użyczenia"
+    header:
+      beforeDate: "zawarta dnia"
+      afterDate: "we `city` pomiędzy:"
+    lender:
+      name: "company name"
+      text: "text"
+      reffered_to: "zwaną dalej"
+      reffered_name: "Użyczającym"
+    and: "a"
+    borrower:
+      withPesel: "posiadający numer PESEL"
+      reffered_to: "zwaną/ym dalej"
+      reffered_name: "Biorącą/ym do używania"
+    deal:
+      sect1:
+        entry1: "Przedmiotami użyczenia czyni się:"
+        entry1_manufacturer: "Marka:"
+        entry1_model: "Model:"
+        entry1_serialNumber: "Numer seryjny:"
+        entry2: "entry2"
+        entry3: "entry3"
+        entry4: "entry4"
+      sect2: "sect2"
+      sect3:
+        entry1: "entry1"
+        entry2: "entry2"
+        entry3: "entry3"
+      sect4:
+        entry1: "entry1"
+        entry2: "entry2"
+        entry3: "entry3"
+      sect5: "sect5"
+      sect6: "sect6"
+      sect7: "sect7"
+      sect8: "sect8"
+    signatures:
+      lender: "Użyczający"
+      borrower: "Biorąca/y do używania"
+      borrower_confirmation: "borrower_confirmation"
+      helpdesk: "helpdesk"
+      helpdesk_confirmation: "helpdesk_confirmation"
+  CoE:
+    title: "Umowa użyczenia"
+    header:
+      beforeDate: "zawarta dnia"
+      afterDate: "w `city` pomiędzy:"
+    lender:
+      name: "company name"
+      text: "text"
+      reffered_to: "zwaną/ym dalej"
+      reffered_name: "Użyczającym"
+    and: "a"
+    borrower:
+      withPesel: "posiadający numer PESEL"
+      reffered_to: "zwaną dalej"
+      reffered_name: "Pracownikiem"
+    deal:
+      sect1:
+        entry1: "Przedmiotami użyczenia czyni się:"
+        entry1_manufacturer: "Marka:"
+        entry1_model: "Model:"
+        entry1_serialNumber: "Numer seryjny:"
+        entry2: "entry2"
+        entry3: "entry3"
+        entry4: "entry4"
+      sect2: "sect2"
+      sect3:
+        entry1: "entry1"
+        entry2: "entry2"
+        entry3: "entry3"
+      sect4:
+        entry1: "entry1"
+        entry2: "entry2"
+      sect5: "sect5"
+      sect6: "sect6"
+      sect7: "sect7"
+      sect8: "sect8"
+    signatures:
+      lender: "Użyczający"
+      borrower: "Pracownik"
+      borrower_confirmation: "borrower_confirmation"
+      helpdesk: "helpdesk"
+  B2B:
+    title: "Protokół przekazania sprzętu"
+    header:
+      beforeDate: "z dnia"
+      afterDate: "w `city` sporządzony pomiędzy:"
+    lender:
+      title: "Przekazujący"
+      name: "company name"
+      address: "company address"
+    borrower:
+      title: "Odbierający"
+      companyName: "Firma"
+      nameAndLastName: "Imię i nazwisko"
+      headquarters: "Siedziba"
+      nip: "NIP"
+    deal:
+      p1: "Firma przekazuje w używanie Odbierającemu, a Odbierający potwierdza odbiór następującego sprzętu:"
+      p1_manufacturer: "Marka:"
+      p1_model: "Model:"
+      p1_serialNumber: "Numer seryjny:"
+      p2: "p2"
+      p3: "p3"
+      p4: "p4"
+      p5: "p5"
+      p6: "p6"
+      p7: "p7"
+      p8: "p8"
+      p9: "p9"
+      p10: "p10"
+    signatures:
+      lender: "Przekazujący"
+      borrower: "Odbierający"
+      date: "Data odbioru sprzętu"
+
+yourHardwareLendingAgreement: Twoja umowa użyczenia sprzętu
+
+accountUnlocked: 'Odblokowanie konta'
+yourAccountHasBeenUnblocked: 'Twoje konto zostało odblokowane.'
+
+mail:
+  welcome:
+    subject: Witaj w Adventure
+    welcomeHeader: Witaj w Adventure!
+    hi: Cześć
+    firstParagraph: Zaloguj się proszę w Adventure. To nasza wewnętrzna platforma, na której są wszyscy nasi pracownicy.
+    secondParagraph: Jeśli pojawiłyby się problemy z logowaniem lub jakiekolwiek inne uwagi do systemu, zgłoś je do zespołu Adventure.
+    thirdParagraph: Dostęp do systemu jest tylko za pomocą logowania naszym firmowym kontem Gmail.
+    listHeader: "Po zalogowaniu do Adventure:"
+    firstPoint: Uzupełnij swoje stanowisko.
+    secondPoint: Dodaj Twoje zdjęcie profilowe.
+    thirdPoint: Wejdź w zakładkę ZGODY > Ogólne, a następnie zapoznaj się z klauzulami PPOŻ/BHP, RODO oraz ISO, a następnie potwierdź zapoznanie się z nimi. Bez potwierdzenia nie będzie możliwe korzystanie z systemu.
+    fourthPoint: Wejdź w zakładkę ZGODY > Marketingowe, a następnie zapoznaj się ze zgodami na wykorzystanie Twojego wizerunku do celów promocji firmy i zaznacz, na które wyrażasz zgodę, a na które nie.
+    fifthPointA: Skontaktuj się z naszym działem Administracji aby uzupełniono Twoją pulę dostępnych
+    fifthPointB:
+      CoE: dni urlopowych
+      B2B: dni wolnych
+    fifthPointC: System pozwala na składanie wniosków o dni wolne i urlopy.
+
+workLocation:
+  reportRemote: 'Raport dni w trybie zdalnym dla osób na UoP oraz UCP'
+  reportTrip: 'Raport dni w podróży dla osób na UoP oraz UCP'
+  titleResignation: '[Adventure] %s - rezygnacja'
+  p1: 'Lista potwierdzonych dni'
+  p2: 'zrezygnowała z potwierdzonych dni'
+  remoteWork:
+    title: '[Adventure] %s - został potwierdzony'
+    CoE: 'okres pracy zdalnej'
+    CLC: 'okres realizacji zlecenia w trybie zdalnym'
+    B2B: 'okres świadczenia usług w trybie zdalnym'
+  businessTrip:
+    title: '[Adventure] %s - została potwierdzona'
+    CoE: 'podróż służbowa'
+    CLC: 'podróż'
+    B2B: 'podróż'
+
+'CoE': 'UoP'
+'CLC LUMP SUM': 'UCP RYCZAŁT'
+'CLC HOURLY': 'UCP GODZINOWE'
+'B2B LUMP SUM': 'B2B RYCZAŁT'
+'B2B HOURLY': 'B2B GODZINOWE'
+
+evidence:
+  reminder:
+    subject: '[Adventure] Przypomnienie o wysłaniu ewidencji'
+    firstLine: 'Hey'
+    secondLine: 'Przypominamy o wysłaniu przez Firmę ewidencji godzin za'
+    thirdLine: 'Prosimy o dostarczenie dokumentu w ostatnim dniu roboczym miesiąca rozliczeniowego (np. informacje za czerwiec dostarcz nam najpóźniej do 30.06, do 16:00). Przypominamy również o uzupełnieniu Avazy. Jeśli masz jakiekolwiek pytania odnośnie projektu/zadania, zwróć się do swojego bezpośredniego managera/Team Leadera.'
+    fourthLine: 'Jeśli masz jakieś pytania lub wątpliwości pisz śmiało na example@example.com.'
+  p1: 'Przyjęliśmy Twoją fakturę i będziemy ją teraz procesować.'
+  p2: 'Jeśli pojawią się pytania do faktury lub raportu, skontaktujemy się z Tobą.'
+  p3: '*Autoresponder dotyczy faktur. W pozostałych sprawach będziemy się z Tobą kontaktować w osobnej wiadomości.'
+  p4: '[Niniejsza wiadomość została wysłana automatycznie.]'

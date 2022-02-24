@@ -1,0 +1,16 @@
+{% extends 'AdventureBundle:Emails:layout.html.twig' %}
+
+{% block body %}
+    <div>
+        <h3>{% trans %}hardwareMails.generate.part1{% endtrans %}</h3>
+        <p>
+            <b>{% trans %}hardwareMails.generate.part2{% endtrans %}:</b>&nbsp;{{ firstName }}&nbsp;{{ lastName }}<br/>
+            <b>{% trans %}hardware{% endtrans %}:</b>&nbsp;{{ manufacturer }}&nbsp;{{ model }}&nbsp;(S/N&nbsp;{{ serialNumber }})<br/>
+            <b>{% trans %}hardwareMails.generate.part3{% endtrans %}:</b>&nbsp;{{ updatedAt }}<br/>
+        </p>
+        <p style="font-size: initial">{% trans %}hardwareMails.generate.part4{% endtrans %}</p>
+    </div>
+    <div style="margin-top: 20px;">
+        <a href="{{ frontend_app_url }}/#/hardware" class="button button-big" target="_blank">{% trans %}goToAdventure{% endtrans %}</a>
+    </div>
+{% endblock %}

@@ -1,0 +1,38 @@
+imports:
+    - { resource: config.yml }
+
+#doctrine:
+#    orm:
+#        metadata_cache_driver: apc
+#        result_cache_driver: apc
+#        query_cache_driver: apc
+
+snc_redis:
+    clients:
+        default:
+            type: phpredis
+            alias: default
+            dsn: [ 'redis://%redis_host%:%redis_port%' ]
+        session:
+            type: phpredis
+            alias: session
+            dsn: [ 'redis://%redis_host_session%:%redis_port_session%' ]
+    session:
+        client: session
+        prefix: adventure
+    doctrine:
+        metadata_cache:
+            client: default
+            entity_manager: default
+            document_manager: default
+        result_cache:
+            client: default
+            entity_manager: [default, read]
+            document_manager: [default, slave1, slave2]
+            namespace: "dcrc:"
+        query_cache:
+            client: default
+            entity_manager: default
+        second_level_cache:
+            client: default
+            entity_manager: default

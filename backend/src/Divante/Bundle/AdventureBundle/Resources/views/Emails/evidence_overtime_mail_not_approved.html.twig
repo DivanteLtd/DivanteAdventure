@@ -1,0 +1,12 @@
+{% extends 'AdventureBundle:Emails:layout.html.twig' %}
+
+{% block body %}
+    <div>
+        <h3>{% trans %}extraHoursWereRejected{% endtrans %}</h3>
+
+        <p>
+            <b>{% trans %}contractorReportingAdditionalHours{% endtrans %}:</b>&nbsp;{{ evidence.employee.name }}&nbsp;{{ evidence.employee.lastName }}<br/>
+            <b>{% trans %}personRequestingAdditionalHours{% endtrans %}:</b>&nbsp;{{ evidence.overtimeManager.name }}&nbsp;{{ evidence.overtimeManager.lastName }}<br/>
+        </p>
+    </div>
+{% endblock %}

@@ -1,0 +1,74 @@
+<?php
+
+namespace Divante\AdventureBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * ProjectSkillArea
+ *
+ * @ORM\Table(name="project_skill_area", uniqueConstraints={@ORM\UniqueConstraint(name="project_id_skill_area_id", columns={"project_id", "skill_area_id"})}, indexes={@ORM\Index(name="FK_project_skill_area_skill_area", columns={"skill_area_id"}), @ORM\Index(name="IDX_8873DAE8166D1F9C", columns={"project_id"})})
+ * @ORM\Entity
+ */
+class ProjectSkillArea
+{
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="value_required", type="float", precision=10, scale=0, nullable=false)
+     */
+    private $valueRequired = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="value_averaged", type="float", precision=10, scale=0, nullable=false)
+     */
+    private $valueAveraged = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="created_at", type="datetime", nullable=false)
+     */
+    private $createdAt = 'CURRENT_TIMESTAMP';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="updated_at", type="datetime", nullable=false)
+     */
+    private $updatedAt = 'CURRENT_TIMESTAMP';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var \Divante\AdventureBundle\Entity\SkillArea
+     *
+     * @ORM\ManyToOne(targetEntity="Divante\AdventureBundle\Entity\SkillArea")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="skill_area_id", referencedColumnName="id")
+     * })
+     */
+    private $skillArea;
+
+    /**
+     * @var \Divante\AdventureBundle\Entity\Project
+     *
+     * @ORM\ManyToOne(targetEntity="Divante\AdventureBundle\Entity\Project")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="project_id", referencedColumnName="id")
+     * })
+     */
+    private $project;
+
+
+}
+

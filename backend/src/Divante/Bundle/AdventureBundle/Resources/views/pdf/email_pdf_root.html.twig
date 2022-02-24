@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8"/>
+    <title>{% block title %}{% endblock %}</title>
+    <style>
+        body {
+            font-family: "DejaVu Sans", sans-serif;
+        }
+        header {
+            padding: 40px 0 10px 0;
+            width: 90%;
+            margin: 0 auto;
+        }
+        div.header-top {
+            background-color: #1071ff;
+            height: 90px;
+            border-radius: 1px;
+        }
+        div.header-top .logo {
+            position: absolute;
+            top: 3.1%;
+            left: 5.2%;
+            width: 90px;
+            display: inline;
+        }
+        div.header-top .title {
+            font-weight: 600;
+            font-size: 140%;
+            text-align: center;
+            color: white;
+            padding-top: 28px;
+        }
+        hr {
+            border: 1px solid rgb(174, 170, 172);
+        }
+        footer {
+            font-size: 55%;
+            position: absolute;
+            bottom: 0;
+            left: 5%;
+        }
+        footer a {
+            text-decoration: none;
+        }
+    </style>
+    {% block style %}{% endblock %}
+</head>
+<body>
+    <div class="header-top">
+        <img class="logo" src="{{ document.logo }}" alt="Adventure"/>
+        <div class="title">
+            <span>{{ block('title') }}</span>
+        </div>
+    </div>
+    <header>
+        {% block header %}{% endblock %}
+        <hr/>
+    </header>
+    {% block body %}{% endblock %}
+</body>
+</html>

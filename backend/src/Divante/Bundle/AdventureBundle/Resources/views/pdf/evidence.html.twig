@@ -1,0 +1,166 @@
+{% extends 'AdventureBundle:pdf:email_pdf_root.html.twig' %}
+
+{% block style %}
+    <style>
+        header h1 {
+            font-variant: titling-caps;
+            text-align: center;
+            font-size: 130%;
+        }
+        header h2 {
+            text-align: left;
+            font-size: 110%;
+            margin-bottom: 1px;
+        }
+        ul, ul li {
+            list-style: none;
+            margin-bottom: 10px;
+            font-size: 90%;
+        }
+        .label {
+            font-weight: bold;
+        }
+        li.note {
+            font-weight: normal;
+            font-style: italic;
+            font-size: 70%;
+        }
+        table {
+            border: none;
+            font-size: 90%;
+            width: 90%;
+            padding-top: 40px;
+            margin: 0 auto;
+        }
+        table tr.signature td {
+            padding-top: 5px;
+        }
+    </style>
+{% endblock %}
+
+{% block title %}
+    {% trans %}recordsOfHours{% endtrans %}
+{% endblock %}
+
+{% block header %}
+    <h2>
+        {% if (document.evidence.employee.contractId == 3) or (document.evidence.employee.contractId == 4) %}
+            {% trans %}evidenceOfHoursPerformanceOfTheMandateContract{% endtrans %}
+        {% else %}
+            {% trans %}evidenceOfHoursOfPerformingCooperationAgreement{% endtrans %}
+        {% endif %}
+    </h2>
+{% endblock %}
+
+{% block body %}
+    <ul>
+        <li>
+            <span class="label">
+                {% if (document.evidence.employee.contractId == 3) or (document.evidence.employee.contractId == 4) %}
+                    {% trans %}nameAndSurnameOfContractor{% endtrans %}:
+                {% else %}
+                    {% trans %}nameAndSurnameOfPerformers{% endtrans %}:
+                {% endif %}
+            </span>
+            <span>{{ document.evidence.employee.name }}&nbsp;{{ document.evidence.employee.lastName }}</span>
+        </li>
+        <li>
+            <span class="label">{% trans %}monthAndYear{% endtrans %}:</span>
+            <span>{{ document.month(document.evidence.month) }}&nbsp;{{ document.evidence.year }}</span>
+        </li>
+        <li>
+            <span class="label">
+                {% if (document.evidence.employee.contractId == 3) or (document.evidence.employee.contractId == 4) %}
+                    {% trans %}numberOfHoursOfPerformingTheCommissionContract{% endtrans %}
+                    {% if (document.evidence.employee.contractId == 3) %}
+                        *
+                    {% endif %}
+                    :
+                {% elseif (document.evidence.employee.contractId == 1) %}
+                    {% trans %}numberOfHoursRendered{% endtrans %}*:
+                {% else %}
+                    {% trans %}numberOfHoursOfServicesRendered{% endtrans %}
+                    {% if (document.evidence.employee.contractId == 3) %}
+                        *
+                    {% endif %}
+                    :
+                {% endif %}
+            </span>
+            <span>{{ document.evidence.workingHours }}</span>
+        </li>
+        {% if (document.evidence.employee.contractId == 2) or (document.evidence.employee.contractId == 4) %}
+        <li>
+            <span class="label">
+                {% trans %}numberOfUnavailabilityDays{% endtrans %}:
+            </span>
+            <span>
+                {{ document.evidence.unavailabilityHours / 8 }}
+                ({{ document.evidence.unavailabilityHours }}&nbsp;{% trans %}hours{% endtrans %})
+            </span>
+        </li>
+        {% else %}
+        <li>
+            <span class="label">
+                {% trans %}numberOfPaidDaysOff{% endtrans %}:
+            </span>
+            <span>
+                {{ document.evidence.paidFreeHours / 8 }}
+                ({{ document.evidence.paidFreeHours }}&nbsp;{% trans %}hours{% endtrans %})
+            </span>
+        </li>
+        <li>
+            <span class="label">
+                {% trans %}numberOfUnpaidDaysOff{% endtrans %}:
+            </span>
+            <span >
+                {{ document.evidence.unpaidFreeHours / 8 }}
+                ({{ document.evidence.unpaidFreeHours }}&nbsp;{% trans %}hours{% endtrans %})
+            </span>
+        </li>
+        <li>
+            <span class="label">
+                {% trans %}numberOfSickLeaveDays{% endtrans %}:
+            </span>
+            <span>
+                {{ document.evidence.sickLeaveHours / 8 }}
+                ({{ document.evidence.sickLeaveHours }}&nbsp;{% trans %}hours{% endtrans %})
+            </span>
+        </li>
+        {% endif %}
+        <li>
+            <span class="label">
+                {% trans %}totalNumberOfHoursPaid{% endtrans %}:
+            </span>
+            <span>
+                {{ document.evidence.workingHours + document.evidence.paidFreeHours + document.evidence.sickLeaveHours }}
+            </span>
+        </li>
+        {% if document.evidence.employee.contractId != 4 and document.evidence.employee.contractId != 2 %}
+            <li class="note">
+                * {% trans %}withoutFreeHours{% endtrans %}
+            </li>
+        {% endif %}
+    </ul>
+    <table>
+        <tr>
+            <td style="text-align: left;">
+                {% if (document.evidence.employee.contractId == 3) or (document.evidence.employee.contractId == 4) %}
+                    {% trans %}contractor'sSignature{% endtrans %}:
+                {% else %}
+                    {% trans %}performers'sSignature{% endtrans %}:
+                {% endif %}
+            </td>
+            <td style="text-align: right;">
+                {% trans %}principal'sSignature{% endtrans %}:
+            </td>
+        </tr>
+        <tr class="signature">
+            <td style="text-align: left;">
+                <i>{{ document.evidence.employee.name }}&nbsp;{{ document.evidence.employee.lastName }}</i>
+            </td>
+            <td style="text-align: right;">
+                ....................................
+            </td>
+        </tr>
+    </table>
+{% endblock %}

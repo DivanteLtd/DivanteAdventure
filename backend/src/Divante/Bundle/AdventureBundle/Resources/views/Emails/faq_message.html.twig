@@ -1,0 +1,24 @@
+{% extends 'AdventureBundle:Emails:layout.html.twig' %}
+
+{% block title %}
+    {% trans %}youReceiveAQuestion{% endtrans %}
+{% endblock %}
+
+{% block body %}
+    <div>
+        <h3>{% trans %}youReceiveAQuestion{% endtrans %}</h3>
+        <p>
+            {% trans %}Person{% endtrans %}:&nbsp;{{ authorName }}
+            {% trans %}askedAQuestionInCategoryYouAreResponsible{% endtrans %}:&nbsp;
+            {{ category }}
+        </p>
+        <h4>{% trans %}contentQuestion{% endtrans %}</h4>
+        <p>
+            {{ question }}
+        </p>
+        <p style="font-size: initial">{% trans %}pleaseUseAdventureFAQModuleToAddThisQuestionWithAnswer{% endtrans %}</p>
+        <div style="margin-top: 20px;">
+            <a href="{{ frontend_app_url }}/#/faq" class="button">{% trans %}goToFAQModule{% endtrans %}</a>
+        </div>
+    </div>
+{% endblock %}

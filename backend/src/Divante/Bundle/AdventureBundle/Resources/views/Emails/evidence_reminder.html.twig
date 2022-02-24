@@ -1,0 +1,11 @@
+{% extends 'AdventureBundle:Emails:layout.html.twig' %}
+
+{% block body %}
+    <p>{% trans %}evidence.reminder.firstLine{% endtrans %},<br>
+        {% trans %}evidence.reminder.secondLine{% endtrans %} {{ date }}<br>
+        {% trans %}evidence.reminder.thirdLine{% endtrans %}
+    </p>
+    <p>
+        {% trans %}evidence.reminder.fourthLine{% endtrans %}
+    </p>
+{% endblock %}

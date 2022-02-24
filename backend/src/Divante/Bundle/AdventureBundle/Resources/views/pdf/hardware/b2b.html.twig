@@ -1,0 +1,88 @@
+{% extends 'AdventureBundle:pdf/hardware:hardware-template.html.twig' %}
+
+{# @var agreement \Divante\Bundle\AdventureBundle\Entity\Hardware\HardwareAgreement #}
+{# @var company string #}
+{# @var name string #}
+{# @var headquarters string #}
+{# @var nip string #}
+
+{% block title %}
+    {% trans %}lending.B2B.title{% endtrans %}
+{% endblock %}
+
+{% block header %}
+    <h3>{% trans %}lending.B2B.header.beforeDate{% endtrans %}&nbsp;{{ signatureDate|default('......') }}&nbsp;{% trans %}lending.B2B.header.afterDate{% endtrans %}</h3>
+{% endblock %}
+
+{% block body %}
+    <div class="entry"><b>{% trans %}lending.B2B.lender.title{% endtrans %}:</b></div>
+    <div class="entry">
+        <b>{% trans %}lending.B2B.lender.name{% endtrans %}</b>,&nbsp;{% trans %}lending.B2B.lender.address{% endtrans %}
+    </div>
+    <div class="entry"><b>{% trans %}lending.B2B.borrower.title{% endtrans %}:</b></div>
+    <div class="entry">
+        <ul class="list-none">
+            <li>{% trans %}lending.B2B.borrower.companyName{% endtrans %}:&nbsp;{{ company }}</li>
+            <li>{% trans %}lending.B2B.borrower.nameAndLastName{% endtrans %}:&nbsp;{{ name }}</li>
+            <li>{% trans %}lending.B2B.borrower.headquarters{% endtrans %}:&nbsp;{{ headquarters }}</li>
+            <li>{% trans %}lending.B2B.borrower.nip{% endtrans %}:&nbsp;{{ nip }}</li>
+        </ul>
+    </div>
+    <div class="paragraph">
+        <ol type="1">
+            <li>
+                {% trans %}lending.B2B.deal.p1{% endtrans %}
+                <ol type="a">
+                    <li>{% trans %}lending.B2B.deal.p1_manufacturer{% endtrans %}&nbsp;<b>{{ agreement.assignment.manufacturer }}</b></li>
+                    <li>{% trans %}lending.B2B.deal.p1_model{% endtrans %}&nbsp;<b>{{ agreement.assignment.model }}</b></li>
+                    <li>{% trans %}lending.B2B.deal.p1_serialNumber{% endtrans %}&nbsp;<b>{{ agreement.assignment.serialNumber }}</b></li>
+                </ol>
+            </li>
+            <li>{% trans %}lending.B2B.deal.p2{% endtrans %}</li>
+            <li>{% trans %}lending.B2B.deal.p3{% endtrans %}</li>
+            <li>{% trans %}lending.B2B.deal.p4{% endtrans %}</li>
+            <li>{% trans %}lending.B2B.deal.p5{% endtrans %}</li>
+            <li>{% trans %}lending.B2B.deal.p6{% endtrans %}</li>
+            <li>{% trans %}lending.B2B.deal.p7{% endtrans %}</li>
+            <li>{% trans %}lending.B2B.deal.p8{% endtrans %}</li>
+            <li>{% trans %}lending.B2B.deal.p9{% endtrans %}</li>
+            <li>{% trans %}lending.B2B.deal.p10{% endtrans %}</li>
+        </ol>
+    </div>
+    <table class="signatures">
+        <tr>
+            <td>
+                {% trans %}lending.B2B.signatures.lender{% endtrans %}:
+            </td>
+            <td style="text-align: right;">
+                {% trans %}lending.B2B.signatures.borrower{% endtrans %}:
+            </td>
+            <td style="text-align: right;">
+                {% trans %}lending.B2B.signatures.date{% endtrans %}:
+            </td>
+        </tr>
+        <tr class="signature">
+            <td>
+                {% if agreement.signedByHelpdesk is null %}
+                    ....................................
+                {% else %}
+                    {{ agreement.helpdeskSigner.name }}&nbsp;{{ agreement.helpdeskSigner.lastName }}
+                {% endif %}
+            </td>
+            <td style="text-align: right;">
+                {% if agreement.signedByUser is null %}
+                    ....................................
+                {% else %}
+                    {{ agreement.assignment.employee.name }}&nbsp;{{ agreement.assignment.employee.lastName }}
+                {% endif %}
+            </td>
+            <td style="text-align: left">
+                {% if signatureDate is null %}
+                    ....................................
+                {% else %}
+                    {{ signatureDate }}
+                {% endif %}
+            </td>
+        </tr>
+    </table>
+{% endblock %}

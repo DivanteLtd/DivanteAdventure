@@ -1,0 +1,162 @@
+{% extends 'AdventureBundle:pdf:email_pdf_root.html.twig' %}
+
+{% block style %}
+    <style>
+        header h1 {
+            font-variant: titling-caps;
+            text-align: center;
+            font-size: 130%;
+        }
+        header h2 {
+            text-align: center;
+            font-size: 110%;
+            font-weight: normal;
+        }
+        ul, ul li {
+            list-style: none;
+            margin-bottom: 10px;
+            font-size: 80%;
+        }
+        table.invisible {
+            border: none;
+            font-size: 80%;
+            text-align: center;
+            width: 100%;
+            margin-top: 3%;
+        }
+        table.invisible td {
+            vertical-align: top;
+        }
+        table.invisible tr.signature td {
+            padding-top: 5%;
+            font-size: 110%;
+            font-style: italic;
+        }
+        table.overtimes, table.overtimes td, table.overtimes th {
+            border-collapse: collapse;
+            font-size: 80%;
+            text-align: center;
+            width: 100%;
+        }
+        table.overtimes {
+            border: 2px solid black;
+        }
+        table.overtimes td, table.overtimes th {
+            border: 1px solid black;
+        }
+        .label {
+            font-weight: bold;
+        }
+        .value {
+            font-style: italic;
+        }
+        div.note p {
+            font-size: 80%;
+        }
+        hr {
+            margin-bottom: 2% !important;
+        }
+    </style>
+{% endblock %}
+
+{% block title %}
+    {% trans %}recordsOfAdditionalHours{% endtrans %}
+{% endblock %}
+
+{% block header %}
+    <h2>
+        {% trans %}month{% endtrans %}:
+        {{ document.month(document.evidence.month) }}&nbsp;{{ document.evidence.year }}
+    </h2>
+{% endblock %}
+
+{% block body %}
+    <table class="invisible">
+        <tr>
+            <td>
+                <ul>
+                    <li>{% if document.evidence.employee.contractId == 1 %}
+                            <u>{% trans %}employer{% endtrans %}:</u>
+                        {% else %}
+                            <u>{% trans %}orderer{% endtrans %}:</u>
+                        {% endif %}</li>
+                    <li class="label">{{ company.name }}</li>
+                    <li>{{ company.address }}</li>
+                    <li>{% trans %}vatId{% endtrans %}:&nbsp;{{ company.vatId }}</li>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <li>
+                        {% if (document.evidence.employee.contractId == 3) or (document.evidence.employee.contractId == 4) %}
+                            <u>{% trans %}contractor{% endtrans %}:</u>
+                        {% elseif document.evidence.employee.contractId == 5 %}
+                            <u>{% trans %}employee{% endtrans %}:</u>
+                        {% else %}
+                            <u>{% trans %}performer{% endtrans %}:</u>
+                        {% endif %}
+                    </li>
+                    <li>
+                        <span class="label">{% trans %}nameAndSurname{% endtrans %}</span>
+                    </li>
+                    <li>
+                        <span class="value">{{ document.evidence.employee.name }}&nbsp;{{ document.evidence.employee.lastName }}</span>
+                    </li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+    <table class="overtimes">
+        <caption>{% trans %}additionalHours{% endtrans %}</caption>
+        <thead>
+            <tr>
+                <th>{% trans %}projectCode{% endtrans %}</th>
+                <th>{% trans %}projectName{% endtrans %}</th>
+                <th>{% trans %}numberOfHours{% endtrans %}</th>
+                <th>{% trans %}Rate{% endtrans %}</th>
+                <th>{% trans %}declaredTime{% endtrans %}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for entry in document.evidence.overtimeEntries %}
+                <tr>
+                    <td>{{ entry.projectCode }}</td>
+                    <td>{{ entry.projectName }}</td>
+                    <td>{{ entry.hours }}</td>
+                    <td>{{ entry.percentage }}%</td>
+                    <td>{{ entry.timeInfo }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <table class="invisible">
+        <tr>
+            <td>
+                {% trans %}signatureOfThePersonRequestingAdditionalHours{% endtrans %}<br/>
+                ({% trans %}onBehalfOf{% endtrans %}&nbsp;
+                {% if document.evidence.employee.contractId == 5 %}
+                {% trans %}employer2{% endtrans %}:
+                {% else %}
+                {% trans %}orderer{% endtrans %}:
+                {% endif %})
+            </td>
+            <td>
+                {% if (document.evidence.employee.contractId == 3) or (document.evidence.employee.contractId == 4) %}
+                    <u>{% trans %}contractorSignature{% endtrans %}:</u>
+                {% elseif document.evidence.employee.contractId == 5 %}
+                    <u>{% trans %}employeeSignature{% endtrans %}:</u>
+                    {% else %}
+                        <u>{% trans %}performerSignature{% endtrans %}:</u>
+                {% endif %}
+            </td>
+        </tr>
+        <tr class="signature">
+            <td>
+                {{ document.evidence.overtimeManager.name }}&nbsp;{{ document.evidence.overtimeManager.lastName }}
+            </td>
+            <td>
+                {{ document.evidence.employee.name }}&nbsp;{{ document.evidence.employee.lastName }}
+            </td>
+        </tr>
+    </table>
+{% endblock %}

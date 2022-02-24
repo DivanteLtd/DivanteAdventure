@@ -1,0 +1,60 @@
+<?php
+
+namespace Divante\AdventureBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * EmployeeProject
+ *
+ * @ORM\Table(name="employee_project", uniqueConstraints={@ORM\UniqueConstraint(name="employee_id_project_id", columns={"employee_id", "project_id"})}, indexes={@ORM\Index(name="FK_employee_project_project", columns={"project_id"}), @ORM\Index(name="IDX_AFFF86E18C03F15C", columns={"employee_id"})})
+ * @ORM\Entity
+ */
+class EmployeeProject
+{
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="created_at", type="datetime", nullable=false)
+     */
+    private $createdAt = 'CURRENT_TIMESTAMP';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="updated_at", type="datetime", nullable=false)
+     */
+    private $updatedAt = 'CURRENT_TIMESTAMP';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var \Divante\AdventureBundle\Entity\Project
+     *
+     * @ORM\ManyToOne(targetEntity="Divante\AdventureBundle\Entity\Project")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="project_id", referencedColumnName="id")
+     * })
+     */
+    private $project;
+
+    /**
+     * @var \Divante\AdventureBundle\Entity\Employee
+     *
+     * @ORM\ManyToOne(targetEntity="Divante\AdventureBundle\Entity\Employee")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="employee_id", referencedColumnName="id")
+     * })
+     */
+    private $employee;
+
+
+}
+

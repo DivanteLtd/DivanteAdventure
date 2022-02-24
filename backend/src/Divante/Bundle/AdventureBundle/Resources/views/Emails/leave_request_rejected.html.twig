@@ -1,0 +1,22 @@
+{% extends 'AdventureBundle:Emails:layout.html.twig' %}
+
+{% block body %}
+    <div>
+        <h3>{% trans %}yourRequest{% endtrans %}&nbsp;#{{ request.id }}&nbsp;{% trans %}hasBeen{% endtrans %} <span style="color:red">{% trans %}rejected{% endtrans %}</span></h3>
+        <p>
+            <b>{% trans %}applicant{% endtrans %}:&nbsp;{{ request.employee.name }}&nbsp;{{ request.employee.lastName }}</b><br>
+            <b>{% trans %}acceptor{% endtrans %}:&nbsp;{{ request.manager.name }}&nbsp;{{ request.manager.lastName }} </b><br>
+            {% trans %}dateOfReview{% endtrans %}:&nbsp;{{ request.acceptedAt|date("Y-m-d H:i:s") }}</p>
+        <p>
+            <b>{% trans %}daysUnaccepted{% endtrans %}:</b><br>
+            {% include 'AdventureBundle:Emails:leave_day_types.html.twig' with {'request': request} %}
+        </p>
+        {% if request.comment %}
+            <p><b>{% trans %}comments{% endtrans %}:</b> {{ request.comment }}</p>
+        {% endif %}
+        <p style="font-size: initial">{% trans %}goToTheApplicationToCheckTheStatusOfYourDaysOff{% endtrans %}.</p>
+    </div>
+    <div style="margin-top: 20px;">
+        <a href="{{ frontend_app_url }}/#/free-days/{{ request.employee.id }}" class="button button-big">{% trans %}goToDaysOff{% endtrans %}</a>
+    </div>
+{% endblock %}

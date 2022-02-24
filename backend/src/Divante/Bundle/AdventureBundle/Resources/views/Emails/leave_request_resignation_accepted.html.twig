@@ -1,0 +1,34 @@
+{% extends 'AdventureBundle:Emails:layout.html.twig' %}
+
+{% block body %}
+    <div>
+        {% set title = true %}
+        {% for day in request.requestDays %}
+            {% if day.status == 0 %}
+                {% set title = false %}
+            {%  endif %}
+        {% endfor %}
+        {% if title %}
+            <h3>#{{ request.id }}&nbsp;{% trans %}Resignation{% endtrans %}&nbsp;{% trans %}fromRequestHasBeen{% endtrans %}&nbsp;<span style="color:green">{% trans %}accepted/{% endtrans %}</span></h3>
+        {% else %}
+            <h3>#{{ request.id }}&nbsp;{% trans %}Resignation{% endtrans %}&nbsp;{% trans %}fromIndividualDaysOfRequestHasBeen{% endtrans %}&nbsp;<span style="color:green">{% trans %}accepted/{% endtrans %}</span></h3>
+        {% endif %}
+        <p>
+            <b>{% trans %}applicant{% endtrans %}:&nbsp;{{ request.employee.name }}&nbsp;{{ request.employee.lastName }}</b><br>
+            <b>{% trans %}acceptor{% endtrans %}:&nbsp;{{ request.manager.name }}&nbsp;{{ request.manager.lastName }} </b><br>
+            {% trans %}dateOfSubmission{% endtrans %}:&nbsp;{{ request.updatedAt|date("Y-m-d H:i:s") }}<br>
+            {% trans %}dateOfReview{% endtrans %}:&nbsp;{{ request.acceptedAt|date("Y-m-d H:i:s") }}
+        </p>
+        <p>
+            <b>{% trans %}resignationFromDays{% endtrans %}:</b><br>
+            {% include 'AdventureBundle:Emails:leave_day_types.html.twig' with {'request': request} %}
+        </p>
+        {% if request.comment %}
+            <p><b>{% trans %}comments{% endtrans %}:</b> {{ request.comment }}</p>
+        {% endif %}
+        <p>{% trans %}goToTheApplicationToCheckTheStatusOfYourDaysOff{% endtrans %}.</p>
+    </div>
+    <div style="margin-top: 20px;">
+        <a href="{{ frontend_app_url }}/#/free-days/{{ request.employee.id }}" class="button button-big">{% trans %}goToDaysOff{% endtrans %}</a>
+    </div>
+{% endblock %}

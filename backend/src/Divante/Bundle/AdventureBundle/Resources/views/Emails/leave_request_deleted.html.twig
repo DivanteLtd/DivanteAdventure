@@ -1,0 +1,17 @@
+{% extends 'AdventureBundle:Emails:layout.html.twig' %}
+
+{% block body %}
+    <div>
+        <h3>{% trans %}Request{% endtrans %}&nbsp;#{{ request.id }}&nbsp;{% trans %}hasBeen{% endtrans %}&nbsp;<span style="color:red">{% trans %}removed{% endtrans %}</span>&nbsp;{% trans %}byTheApplicant{% endtrans %}.</h3>
+        <p>
+            <b>{% trans %}applicant{% endtrans %}:&nbsp;{{ request.employee.name }}&nbsp;{{ request.employee.lastName }} </b><br>
+            <b>{% trans %}acceptor{% endtrans %}:&nbsp;{{ request.manager.name }}&nbsp;{{ request.manager.lastName }} </b><br>
+            {% trans %}dateOfSubmission{% endtrans %}:&nbsp;{{ request.createdAt|date("Y-m-d H:i:s") }}<br>
+            {% trans %}dateOfDeletions{% endtrans %}:&nbsp;{{ dateNow }}
+        </p>
+        <p style="font-size: initial">{% trans %}goToTheApplicationToCheckTheStatusOfYourDaysOff{% endtrans %}.</p>
+    </div>
+    <div style="margin-top: 20px;">
+        <a href="{{ frontend_app_url }}/#/free-days/{{ request.employee.id }}" class="button button-big">{% trans %}goToDaysOff{% endtrans %}</a>
+    </div>
+{% endblock %}
